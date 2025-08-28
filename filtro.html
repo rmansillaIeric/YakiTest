@@ -1,121 +1,171 @@
 <!DOCTYPE html>
-<html lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Filtro Legales</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Filtro Legales</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+
 <body class="bg-gray-100 p-8">
-<div class="max-w-7xl mx-auto bg-white rounded-lg shadow p-6" x-data="{ appliedFilters: [] }">
-<div class="flex justify-between items-center mb-6">
-<h1 class="text-3xl font-bold">Legales</h1>
-</div>
-<div class="flex items-start space-x-4">
-<div class="relative inline-block text-left" x-data="{ open: false }">
-<div>
-<button @click="open = !open" aria-expanded="true" aria-haspopup="true" class="inline-flex items-center justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-button" type="button">
-<span class="material-icons mr-2">filter_list</span>
+    <div class="max-w-7xl mx-auto bg-white rounded-lg shadow p-6" x-data="{ appliedFilters: [] }">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold">Legales</h1>
+        </div>
+        <div class="flex items-start space-x-4">
+            <div class="relative inline-block text-left" x-data="{ open: false }">
+                <div>
+                    <button @click="open = !open" aria-expanded="true" aria-haspopup="true"
+                        class="inline-flex items-center justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                        id="menu-button" type="button">
+                        <span class="material-icons mr-2">filter_list</span>
                         Filtro
-                        <span :class="{ 'rotate-180': open }" class="material-symbols-outlined ml-2 transition-transform">expand_more</span>
-</button>
-</div>
-<div @click.away="open = false" aria-labelledby="menu-button" aria-orientation="vertical" class="origin-top-left absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10" role="menu" style="display: none;" tabindex="-1" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-end="transform opacity-100 scale-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:leave="transition ease-in duration-75" x-transition:leave-end="transform opacity-0 scale-95" x-transition:leave-start="transform opacity-100 scale-100">
-<div class="p-4 space-y-4">
-<div>
-<label class="block text-sm font-medium text-gray-700" for="cuit">CUIT</label>
-<input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="cuit" placeholder="Ingrese CUIT" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="ieric">IERIC</label>
-<input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="ieric" placeholder="Ingrese IERIC" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="legajo">Legajo</label>
-<input class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="legajo" placeholder="Ingrese número de legajo" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="estado">Estado</label>
-<select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" id="estado">
-<option>Todos</option>
-<option>Activo</option>
-<option>Inactivo</option>
-<option>Pendiente</option>
-</select>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="giro">Giro</label>
-<select class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md" id="giro">
-<option>Todos</option>
-<option>Construcción</option>
-<option>Servicios</option>
-<option>Industria</option>
-</select>
-</div>
-</div>
-<div class="px-4 py-3 bg-gray-50 flex justify-end space-x-2">
-<button class="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">
+                        <span :class="{ 'rotate-180': open }"
+                            class="material-symbols-outlined ml-2 transition-transform">expand_more</span>
+                    </button>
+                </div>
+                <div @click.away="open = false" aria-labelledby="menu-button" aria-orientation="vertical"
+                    class="origin-top-left absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+                    role="menu" style="display: none;" tabindex="-1" x-show="open"
+                    x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-end="transform opacity-0 scale-95"
+                    x-transition:leave-start="transform opacity-100 scale-100">
+                    <div class="p-4 space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700" for="cuit">CUIT</label>
+                            <input
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                id="cuit" placeholder="Ingrese CUIT" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700" for="ieric">IERIC</label>
+                            <input
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                id="ieric" placeholder="Ingrese IERIC" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700" for="legajo">Legajo</label>
+                            <input
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                id="legajo" placeholder="Ingrese número de legajo" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700" for="estado">Estado</label>
+                            <select
+                                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                                id="estado">
+                                <option>Todos</option>
+                                <option>Activo</option>
+                                <option>Inactivo</option>
+                                <option>Pendiente</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700" for="giro">Giro</label>
+                            <select
+                                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                                id="giro">
+                                <option>Todos</option>
+                                <option>Construcción</option>
+                                <option>Servicios</option>
+                                <option>Industria</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 flex justify-end space-x-2">
+                        <button
+                            class="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            type="button">
                             Limpiar
                         </button>
-<button @click="appliedFilters.push({type: 'Filtro', value: 'CUIT: 20-12345678-9'}); open = false" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" type="button">
+                        <button
+                            @click="appliedFilters.push({type: 'Filtro', value: 'CUIT: 20-12345678-9'}); open = false"
+                            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            type="button">
                             Aplicar
                         </button>
-</div>
-</div>
-</div>
-<div class="relative inline-block text-left" x-data="{ open: false }">
-<button @click="open = !open" class="inline-flex items-center justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
-<span class="material-symbols-outlined mr-2">calendar_today</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative inline-block text-left" x-data="{ open: false }">
+                <button @click="open = !open"
+                    class="inline-flex items-center justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+                    <span class="material-symbols-outlined mr-2">calendar_today</span>
                     Fecha
-                    <span :class="{ 'rotate-180': open }" class="material-symbols-outlined ml-2 transition-transform">expand_more</span>
-</button>
-<div @click.away="open = false" class="origin-top-left absolute left-0 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10" style="display: none;" x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-end="transform opacity-100 scale-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:leave="transition ease-in duration-75" x-transition:leave-end="transform opacity-0 scale-95" x-transition:leave-start="transform opacity-100 scale-100">
-<div class="p-4 space-y-4">
-<div id="date-filters">
-<div class="flex items-center space-x-2 mb-2">
-<select class="block w-1/3 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-<option>Fecha de creación</option>
-<option>Fecha de modificación</option>
-<option>Fecha de vencimiento</option>
-</select>
-<input class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/3 shadow-sm sm:text-sm border-gray-300 rounded-md" type="date"/>
-<input class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/3 shadow-sm sm:text-sm border-gray-300 rounded-md" type="date"/>
-</div>
-</div>
-<button class="flex items-center text-sm text-blue-600 hover:text-blue-800" id="add-date-filter" type="button">
-<span class="material-icons mr-1">add</span>
+                    <span :class="{ 'rotate-180': open }"
+                        class="material-symbols-outlined ml-2 transition-transform">expand_more</span>
+                </button>
+                <div @click.away="open = false"
+                    class="origin-top-left absolute left-0 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+                    style="display: none;" x-show="open" x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-end="transform opacity-100 scale-100"
+                    x-transition:enter-start="transform opacity-0 scale-95"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-end="transform opacity-0 scale-95"
+                    x-transition:leave-start="transform opacity-100 scale-100">
+                    <div class="p-4 space-y-4">
+                        <div id="date-filters">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <select
+                                    class="block w-1/3 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                                    <option>Fecha de creación</option>
+                                    <option>Fecha de modificación</option>
+                                    <option>Fecha de vencimiento</option>
+                                </select>
+                                <input
+                                    class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/3 shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                    type="date" />
+                                <input
+                                    class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/3 shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                    type="date" />
+                            </div>
+                        </div>
+                        <button class="flex items-center text-sm text-blue-600 hover:text-blue-800" id="add-date-filter"
+                            type="button">
+                            <span class="material-icons mr-1">add</span>
                             Añadir otro filtro de fecha
                         </button>
-</div>
-<div class="px-4 py-3 bg-gray-50 flex justify-end space-x-2">
-<button class="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 flex justify-end space-x-2">
+                        <button
+                            class="inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            type="button">
                             Cancelar
                         </button>
-<button @click="appliedFilters.push({type: 'Fecha', value: 'Creación: 2023-01-01 - 2023-12-31'}); open = false" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" type="button">
+                        <button
+                            @click="appliedFilters.push({type: 'Fecha', value: 'Creación: 2023-01-01 - 2023-12-31'}); open = false"
+                            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            type="button">
                             Aplicar
                         </button>
-</div>
-</div>
-</div>
-</div>
-<div class="mt-4 pt-4 border-t border-gray-200" x-show="appliedFilters.length &gt; 0">
-<div class="flex flex-wrap items-center gap-2">
-<span class="text-sm font-medium text-gray-600">Filtros aplicados:</span>
-<template :key="index" x-for="(filter, index) in appliedFilters">
-<div class="flex items-center bg-gray-200 text-gray-800 text-sm font-medium px-2 py-1 rounded-full">
-<span x-text="filter.value"></span>
-<button @click="appliedFilters.splice(index, 1)" class="ml-2 text-gray-500 hover:text-gray-700">
-<span class="material-icons text-sm">close</span>
-</button>
-</div>
-</template>
-<button @click="appliedFilters = []" class="text-sm text-blue-600 hover:text-blue-800" x-show="appliedFilters.length &gt; 0">Limpiar todo</button>
-</div>
-</div>
-</div>
-<script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 pt-4 border-t border-gray-200" x-show="appliedFilters.length &gt; 0">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-sm font-medium text-gray-600">Filtros aplicados:</span>
+                <template :key="index" x-for="(filter, index) in appliedFilters">
+                    <div class="flex items-center bg-gray-200 text-gray-800 text-sm font-medium px-2 py-1 rounded-full">
+                        <span x-text="filter.value"></span>
+                        <button @click="appliedFilters.splice(index, 1)" class="ml-2 text-gray-500 hover:text-gray-700">
+                            <span class="material-icons text-sm">close</span>
+                        </button>
+                    </div>
+                </template>
+                <button @click="appliedFilters = []" class="text-sm text-blue-600 hover:text-blue-800"
+                    x-show="appliedFilters.length &gt; 0">Limpiar todo</button>
+            </div>
+        </div>
+    </div>
+    <script>
         // This script is to simulate the addition of new date filters.
         // In a real application, you would use a framework like React, Vue, or Angular.
         const addDateFilterButton = document.getElementById('add-date-filter');
@@ -148,4 +198,6 @@
         }
     </script>
 
-</body></html>
+</body>
+
+</html>

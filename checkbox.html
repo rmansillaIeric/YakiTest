@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IERIC - Legales</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary: #084470;
+            --secondary: #68C8D8;
+            --background: #E8F0F7;
+            --neutral: #DEDFDE;
+            --text-primary: #1E293B;
+            --text-secondary: #475569;
+            --accent: #E8F0F7;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .modal {
+            display: none;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-[var(--background)]">
+<div class="flex h-screen">
+<aside class="w-64 bg-[var(--primary)] text-white flex flex-col p-4 space-y-6">
+<div class="flex items-center gap-2 px-2">
+<img alt="IERIC Logo" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxynST5xfdDiU3l1SLNBniPh7ffqO2ao_eD4hJp1_DSacnRGor3gUZbh4FRW_hj38K7mc3jmAKchjBkXB0mgRcrx6SlP3-zPLzo_TaY_H4dhgmEiUx_Ki1s_m9Ibf4aJi4AeC7gBY3Bndif1FGVCbl6cC8WKsanUSvarAX3LvINbJPZpk9cagUnXqjbRmihZBZHEntUTyHo1qw5NktDk23XXw-SG9INlRaAAPyKYfCfhWOwhgwz1wZoFQs4ZPRnvMRGvuabB4Hko"/>
+<div>
+<h1 class="text-xl font-bold">IERIC</h1>
+<p class="text-xs text-gray-300">v1.2.3</p>
+</div>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-icons">home</span>
+<span>Inicio</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-icons">search</span>
+<span>Fiscalización</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-white text-[var(--primary)] font-semibold shadow-md" href="#">
+<span class="material-icons">gavel</span>
+<span>Legales</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-icons">attach_money</span>
+<span>Cobranzas</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-icons">visibility</span>
+<span>Auditoría</span>
+</a>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="bg-white shadow-sm flex items-center justify-between px-6 py-3">
+<h2 class="text-2xl font-bold text-[var(--text-primary)]">Legales</h2>
+<div class="flex items-center gap-4">
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]">
+<span class="material-icons">notifications</span>
+</button>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]">
+<span class="material-icons">settings</span>
+</button>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]">
+<span class="material-icons">apps</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEAHFFmCcCmzlgq0obdnixDykNX_1Ec3eDs8jTp0dNsnLYg0lnE71ig4XJBoWNiTlq44U3kJCqxUFg4O3n0Af4AVyTuZaftL2upaEwtiDcBUYdFOq7ahwRdmSwE7GhogpNP4Tfrd5a1t2aaNGcSJ3pP4ReCqc6H3wYjL4uVHc6j7xnra40fR9P6cJzTFjriU1tFKXe897OA3WsvYt16yisIs0-CRlofwmDlwxZ_9RWq8YBbG7poy9Fg3FocCJ0Yw3gBVG81hOiQkY");'></div>
+</div>
+</header>
+<main class="flex-1 p-6 flex flex-col gap-6">
+<div class="bg-white rounded-xl shadow-lg p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Acta de fiscalización</h3>
+<div class="relative w-1/3">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="form-input w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" placeholder="Buscar..." type="text"/>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-4 mb-4 pb-2 border-b">
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 transition-colors text-sm font-medium">
+<span class="material-icons text-lg">filter_list</span>
+<span>Filtro</span>
+<span class="material-icons text-lg transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute z-20 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4">
+<form class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700" for="cuit">CUIT</label>
+<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="cuit" name="cuit" type="number"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="ieric">IERIC</label>
+<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="ieric" name="ieric" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="legajo">Legajo</label>
+<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="legajo" name="legajo" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="estado-filtro">Estado</label>
+<select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="estado-filtro" name="estado-filtro">
+<option>Todos</option>
+<option>Ingresado</option>
+<option>Pendiente</option>
+<option>Archivado</option>
+<option>Resuelto</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="giro">Giro</label>
+<select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="giro" name="giro">
+<option>Todos</option>
+<option>IMR</option>
+<option>Fiscalización</option>
+<option>Representación</option>
+<option>Legales</option>
+</select>
+</div>
+<div class="flex justify-end gap-2 pt-4 border-t">
+<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300" type="button">Limpiar</button>
+<button class="px-4 py-2 text-sm font-medium text-white bg-[var(--primary)] rounded-md hover:bg-blue-800" type="submit">Aplicar</button>
+</div>
+</form>
+</div>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 transition-colors text-sm font-medium">
+<span class="material-icons text-lg">date_range</span>
+<span>Fecha</span>
+<span class="material-icons text-lg transition-transform group-hover:rotate-180">expand_more</span>
+</button>
+<div class="absolute z-20 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4">
+<form class="space-y-4">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-gray-700">Rango de fechas</label>
+                <div class="flex items-center gap-2">
+                    <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" name="date-from" type="date"/>
+                    <span>-</span>
+                    <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" name="dateTo" type="date"/>
+                </div>
+</div>
+<div>
+<a class="text-sm text-[var(--primary)] hover:underline" href="#">Añadir otro filtro de fecha</a>
+</div>
+<div class="flex justify-end gap-2 pt-4 border-t">
+<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300" type="button">Cancelar</button>
+<button class="px-4 py-2 text-sm font-medium text-white bg-[var(--primary)] rounded-md hover:bg-blue-800" type="submit">Aplicar</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+        <div aria-live="polite" class="flex flex-wrap items-center gap-2 mb-4" id="filter-chips-container">
+            <!-- Los chips de filtros se agregarán dinámicamente aquí -->
+            <button class="text-sm font-medium text-[var(--primary)] hover:underline transition-colors" id="clearAllButton">Limpiar todo</button>
+        </div>
+<div class="overflow-x-auto border-t border-gray-200 flex-grow">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b-2 border-gray-200">
+<th class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)]" id="selectAll" type="checkbox"/></th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Acta</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">IERIC</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">CUIT</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Razón Social</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Asignación</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Inicio</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Fin</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider text-center">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr class="hover:bg-gray-50">
+<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium">12345</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-001</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">20-12345678-9</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">Constructora Ramirez S.A.</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs">Asignado</span></td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-01-15</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-01-20</td>
+<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<div class="flex items-center justify-center space-x-2">
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
+<span class="material-icons">sync_alt</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
+<span class="material-icons">send</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
+<span class="material-icons">visibility</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
+<span class="material-icons">history</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium">67890</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-002</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">20-98765432-1</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">Obras Modernas SRL</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs">En Proceso</span></td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-02-01</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-02-10</td>
+<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<div class="flex items-center justify-center space-x-2">
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
+<span class="material-icons">sync_alt</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
+<span class="material-icons">send</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
+<span class="material-icons">visibility</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
+<span class="material-icons">history</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium">11223</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-003</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">20-11223344-5</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">Edificaciones Lopez</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs">Completado</span></td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-03-05</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-03-15</td>
+<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<div class="flex items-center justify-center space-x-2">
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
+<span class="material-icons">sync_alt</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
+<span class="material-icons">send</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
+<span class="material-icons">visibility</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
+<span class="material-icons">history</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium">44556</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-004</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">20-55667788-9</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">Proyectos Urbanos SA</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs">Asignado</span></td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-04-01</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-04-10</td>
+<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<div class="flex items-center justify-center space-x-2">
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
+<span class="material-icons">sync_alt</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
+<span class="material-icons">send</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
+<span class="material-icons">visibility</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
+<span class="material-icons">history</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium">77889</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-005</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">20-99001122-3</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">Construcciones Perez</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs">En Proceso</span></td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-05-10</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-05-20</td>
+<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<div class="flex items-center justify-center space-x-2">
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
+<span class="material-icons">sync_alt</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
+<span class="material-icons">send</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
+<span class="material-icons">visibility</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
+<span class="material-icons">history</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium">99001</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-006</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">20-33445566-7</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">Inmobiliaria Gomez</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs">Completado</span></td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-06-01</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-06-15</td>
+<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<div class="flex items-center justify-center space-x-2">
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
+<span class="material-icons">sync_alt</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
+<span class="material-icons">send</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
+<span class="material-icons">visibility</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
+<span class="material-icons">history</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium">22334</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-007</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">20-77889900-1</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">Desarrollos Martinez</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs">Asignado</span></td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-07-05</td>
+<td class="p-3 text-sm text-[var(--text-secondary)]">2024-07-15</td>
+<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<div class="flex items-center justify-center space-x-2">
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
+<span class="material-icons">sync_alt</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
+<span class="material-icons">send</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
+<span class="material-icons">visibility</span>
+</button>
+<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
+<span class="material-icons">history</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-gray-200 mt-auto">
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800 disabled:bg-gray-300 disabled:cursor-not-allowed" disabled="" id="sendButton">Enviar</button>
+<span class="text-sm text-[var(--text-secondary)]">Mostrando 1 a 7 de 25 resultados</span>
+</div>
+<div class="flex items-center space-x-2">
+<button class="p-2 rounded-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-[var(--text-secondary)]">
+<span class="material-icons">chevron_left</span>
+</button>
+<button class="px-4 py-2 text-sm rounded-md bg-[var(--primary)] text-white font-medium">1</button>
+<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">2</button>
+<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">3</button>
+<span class="text-[var(--text-secondary)]">...</span>
+<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">4</button>
+<button class="p-2 rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">
+<span class="material-icons">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="exportModal">
+<div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+<div class="flex justify-between items-center pb-3 border-b">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Exportar Datos</h3>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('exportModal').classList.remove('active')">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="py-4 space-y-3">
+<p class="text-sm text-[var(--text-secondary)]">Seleccione el formato en el que desea exportar los datos de la tabla.</p>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-secondary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors" onclick="alert('Exporting PDF...')">
+<span class="material-icons text-lg text-red-600">picture_as_pdf</span>
+<span>Exportar PDF</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-secondary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors" onclick="alert('Exporting CSV...')">
+<span class="material-icons text-lg text-green-600">description</span>
+<span>Exportar CSV</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-secondary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors" onclick="alert('Exporting JSON...')">
+<span class="material-icons text-lg text-blue-600">code</span>
+<span>Exportar JSON</span>
+</button>
+</div>
+<div class="flex justify-end pt-3 border-t">
+<button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300" onclick="document.getElementById('exportModal').classList.remove('active')">Cancelar</button>
+</div>
+</div>
+</div>
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="cambioEstadoModal">
+<div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+<div class="flex justify-between items-center pb-3 border-b">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Cambio de Estado</h3>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.remove('active')">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="py-4 space-y-4">
+<p class="text-sm text-[var(--text-secondary)]">Seleccione el nuevo estado para el acta <span class="font-bold">12345</span>.</p>
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="estado">Nuevo Estado</label>
+<select class="form-select w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="estado" name="estado">
+<option>Ingresado</option>
+<option>En Proceso</option>
+<option>Resuelto</option>
+<option>Pendiente de Revisión</option>
+<option>Archivado</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="motivo">Motivo del cambio</label>
+<textarea class="form-textarea w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="motivo" name="motivo" placeholder="Escriba un breve motivo..." rows="3"></textarea>
+</div>
+</div>
+<div class="flex justify-end pt-3 border-t space-x-2">
+<button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300" onclick="document.getElementById('cambioEstadoModal').classList.remove('active')">Cancelar</button>
+<button class="px-4 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800">Guardar Cambio</button>
+</div>
+</div>
+</div>
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="girarModal">
+<div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+<div class="flex justify-between items-center pb-3 border-b">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Girar Acta</h3>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.remove('active')">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="py-4 space-y-4">
+<p class="text-sm text-[var(--text-secondary)]">Girar el acta <span class="font-bold">12345</span> a un nuevo departamento o área.</p>
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="area">Girar a</label>
+<select class="form-select w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="area" name="area">
+<option>Departamento de Legales</option>
+<option>Área de Fiscalización</option>
+<option>Gerencia de Cobranzas</option>
+<option>Auditoría Interna</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="motivo-giro">Motivo del giro</label>
+<textarea class="form-textarea w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="motivo-giro" name="motivo-giro" placeholder="Escriba un breve motivo..." rows="3"></textarea>
+</div>
+</div>
+<div class="flex justify-end pt-3 border-t space-x-2">
+<button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300" onclick="document.getElementById('girarModal').classList.remove('active')">Cancelar</button>
+<button class="px-4 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800">Confirmar Giro</button>
+</div>
+</div>
+</div>
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="historyModal">
+<div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-lg">
+<div class="flex justify-between items-center pb-3 border-b">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Historial de Cambios (Acta: 12345)</h3>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.remove('active')">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="py-4">
+<p class="text-sm text-[var(--text-secondary)] mb-4">A continuación se muestra el historial de cambios de estado y giro para el acta seleccionada.</p>
+<div class="space-y-4">
+<div>
+<h4 class="font-semibold text-[var(--text-primary)]">Cambios de Estado</h4>
+<ul class="list-disc list-inside text-[var(--text-secondary)] text-sm mt-2 space-y-1">
+<li><span class="font-medium">2024-01-15 10:30:</span> Estado cambiado de <span class="font-semibold text-red-600">Pendiente</span> a <span class="font-semibold text-yellow-600">Asignado</span>.</li>
+<li><span class="font-medium">2024-01-18 14:00:</span> Estado cambiado de <span class="font-semibold text-yellow-600">Ingresado </span> a <span class="font-semibold text-blue-600">En Proceso</span>.</li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-[var(--text-primary)]">Cambios de Giro</h4>
+<ul class="list-disc list-inside text-[var(--text-secondary)] text-sm mt-2 space-y-1">
+<li><span class="font-medium">2024-01-16 09:00:</span> Girado a <span class="font-semibold">Departamento de Legales</span>. Motivo: Revisión inicial.</li>
+<li><span class="font-medium">2024-01-19 11:45:</span> Girado a <span class="font-semibold">Área de Fiscalización</span>. Motivo: Verificación de datos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="flex justify-end pt-3 border-t">
+<button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300" onclick="document.getElementById('historyModal').classList.remove('active')">Cerrar</button>
+</div>
+</div>
+</div>
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="filterModal">
+<div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-lg">
+<div class="flex justify-between items-center pb-3 border-b">
+<h3 class="text-lg font-bold text-[var(--text-primary)]">Filtrar Actas</h3>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('filterModal').classList.remove('active')">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="py-4 space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="filter-ieric">IERIC</label>
+<input class="form-input w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="filter-ieric" placeholder="Ej: IERIC-001" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="filter-cuit">CUIT</label>
+<input class="form-input w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="filter-cuit" placeholder="Ej: 20-12345678-9" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="filter-date-from">Fecha Desde</label>
+<input class="form-input w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="filter-date-from" type="date"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="filter-date-to">Fecha Hasta</label>
+<input class="form-input w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="filter-date-to" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--text-secondary)] mb-1" for="filter-acta">Número de Acta</label>
+<input class="form-input w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="filter-acta" placeholder="Ej: 12345" type="text"/>
+</div>
+</div>
+<div class="flex justify-end pt-3 border-t space-x-2">
+<button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300" onclick="document.getElementById('filterModal').classList.remove('active')">Cancelar</button>
+<button class="px-4 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800">Aplicar Filtros</button>
+</div>
+</div>
+</div>
+<div class="modal" id="legacyCambioEstadoModal"></div>
+<div class="modal" id="legacyGirarModal"></div>
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="viewActaModal">
+<div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
+<div class="flex justify-between items-center p-4 border-b">
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Detalle del Acta de Fiscalización</h3>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.remove('active')">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="flex-grow flex flex-col overflow-hidden">
+<div class="flex-shrink-0 px-4 pt-4 -mb-px">
+<div class="flex space-x-1">
+<button class="tab-btn active-tab px-4 py-2 -ml-2 rounded-t-lg bg-white text-[var(--primary)] font-semibold flex items-center gap-2" onclick="openTab(event, 'legajoTab', 'folder_open')">
+<span class="material-icons">folder_open</span>
+                        Detalle de Legajo
+                    </button>
+<button class="tab-btn px-4 py-2 rounded-t-lg bg-gray-200 text-[var(--text-secondary)] hover:bg-gray-300 font-semibold flex items-center gap-2" onclick="openTab(event, 'actaTab', 'folder')">
+<span class="material-icons">folder</span>
+                        Actas de Obra
+                    </button>
+<button class="tab-btn px-4 py-2 rounded-t-lg bg-gray-200 text-[var(--text-secondary)] hover:bg-gray-300 font-semibold flex items-center gap-2" onclick="openTab(event, 'articulosTab', 'folder')">
+<span class="material-icons">folder</span>
+                        Articulos
+                    </button>
+</div>
+</div>
+<div class="flex-grow p-6 bg-white border-t border-gray-200 overflow-y-auto">
+<div class="tab-content active" id="legajoTab">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">Número de Acta:</span>
+<span class="text-[var(--text-primary)]">12345</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">Número IERIC:</span>
+<span class="text-[var(--text-primary)]">IERIC-001</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">CUIT:</span>
+<span class="text-[var(--text-primary)]">20-12345678-9</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">Razón Social:</span>
+<span class="text-[var(--text-primary)]">Constructora Ramirez S.A.</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">Estado de Asignación:</span>
+<span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs self-start mt-1">Ingresado</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">Fecha de Inicio:</span>
+<span class="text-[var(--text-primary)]">15 de Enero, 2024</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">Fecha de Fin:</span>
+<span class="text-[var(--text-primary)]">20 de Enero, 2024</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-[var(--text-secondary)]">Inspector Asignado:</span>
+<span class="text-[var(--text-primary)]">Juan Pérez</span>
+</div>
+<div class="flex flex-col md:col-span-2">
+<span class="font-semibold text-[var(--text-secondary)]">Dirección de Obra:</span>
+<span class="text-[var(--text-primary)]">Av. Siempre Viva 742, Springfield</span>
+</div>
+<div class="md:col-span-2 pt-4 mt-4 border-t border-gray-200">
+<h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Observaciones</h4>
+<p class="text-[var(--text-secondary)] bg-gray-50 p-3 rounded-lg border">Se constató la falta de registro de 3 trabajadores. Se labró acta de infracción correspondiente. Se requiere presentar la documentación respaldatoria en un plazo de 5 días hábiles.</p>
+</div>
+<div class="md:col-span-2 pt-4 mt-4 border-t border-gray-200">
+<h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Archivos Adjuntos</h4>
+<ul class="space-y-2">
+<li class="flex items-center justify-between bg-gray-50 p-3 rounded-lg border">
+<div class="flex items-center gap-3">
+<span class="material-icons text-red-500">picture_as_pdf</span>
+<span class="text-[var(--text-primary)] font-medium">Acta_Firmada_12345.pdf</span>
+</div>
+<button class="text-[var(--primary)] hover:underline text-sm font-semibold">Descargar</button>
+</li>
+<li class="flex items-center justify-between bg-gray-50 p-3 rounded-lg border">
+<div class="flex items-center gap-3">
+<span class="material-icons text-blue-500">image</span>
+<span class="text-[var(--text-primary)] font-medium">Foto_Evidencia_01.jpg</span>
+</div>
+<button class="text-[var(--primary)] hover:underline text-sm font-semibold">Descargar</button>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="tab-content" id="actaTab">
+<div class="p-4">
+<p class="text-center text-[var(--text-secondary)]">No hay Actas de Obra disponibles para este legajo.</p>
+</div>
+</div>
+<div class="tab-content" id="articulosTab">
+<div class="p-4">
+<p class="text-center text-[var(--text-secondary)]">No hay Artículos disponibles para este legajo.</p>
+</div>
+</div>
+</div>
+<div class="flex justify-end p-4 border-t mt-auto bg-white rounded-b-lg space-x-2">
+<button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300" onclick="document.getElementById('viewActaModal').classList.remove('active')">Cerrar</button>
+<button class="px-4 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800 flex items-center gap-2">
+<span class="material-icons text-sm">print</span>
+                    Imprimir
+                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="confirmSendModal">
+    <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+        <div class="flex items-center gap-3 pb-3 border-b">
+            <span class="material-icons text-[var(--secondary)] text-2xl">send</span>
+            <h3 class="text-lg font-bold text-[var(--text-primary)]">Confirmar envío</h3>
+        </div>
+        <div class="py-4 space-y-4">
+            <p class="text-sm text-[var(--text-secondary)]">¿Está seguro de enviar estas actas?</p>
+            
+            <div>
+                <label class="block text-sm font-medium text-[var(--text-secondary)] mb-2" for="destino">Destino</label>
+                <select class="form-select w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" id="destino" name="destino">
+                    <option value="legales">Legales</option>
+                    <option value="fiscalizacion">Fiscalización</option>
+                    <option value="representacion">Representación</option>
+                    <option value="imr">IMR</option>
+                    <option value="auditoria">Auditoría</option>
+                </select>
+            </div>
+            
+            <div class="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
+                <span class="material-icons text-[var(--secondary)] text-lg">info</span>
+                <span id="selectedCount">0 actas seleccionadas</span>
+            </div>
+        </div>
+                 <div class="flex justify-end gap-3 pt-3 border-t">
+             <button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300 transition-colors" onclick="closeConfirmSendModal()">
+                 Cancelar
+             </button>
+             <button class="px-4 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800 transition-colors" onclick="confirmSend()">
+                 Confirmar
+             </button>
+         </div>
+     </div>
+ </div>
+ 
+ <!-- Sistema de Notificaciones Toast -->
+ <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+<!-- funcionabilidad activadad -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // ===== SISTEMA DE CHECKBOXES =====
+        const selectAllCheckbox = document.getElementById('selectAll');
+        const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+        const sendButton = document.getElementById('sendButton');
+        
+        // Función para habilitar/deshabilitar botón de envío
+        function toggleSendButton() {
+            const anyChecked = Array.from(rowCheckboxes).some(cb => cb.checked);
+            sendButton.disabled = !anyChecked;
+        }
+        
+        // Event listener para checkbox "Seleccionar todo"
+        selectAllCheckbox.addEventListener('change', (e) => {
+            rowCheckboxes.forEach(checkbox => {
+                checkbox.checked = e.target.checked;
+            });
+            toggleSendButton();
+        });
+        
+        // Event listeners para checkboxes individuales
+        rowCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                if (!checkbox.checked) {
+                    selectAllCheckbox.checked = false;
+                } else {
+                    const allChecked = Array.from(rowCheckboxes).every(cb => cb.checked);
+                    selectAllCheckbox.checked = allChecked;
+                }
+                toggleSendButton();
+            });
+        });
+        
+        // ===== SISTEMA DE FILTROS =====
+        const filterForm = document.querySelector('form');
+        const filterChipsContainer = document.getElementById('filter-chips-container');
+        let activeFilters = new Map();
+        
+        // Función para crear chips de filtros activos
+        function createFilterChip(key, value, displayValue) {
+            const chip = document.createElement('div');
+            chip.className = 'inline-flex items-center bg-[var(--accent)] text-[var(--text-primary)] text-sm font-medium pl-3 pr-2 py-1 rounded-full';
+            chip.innerHTML = `
+                <span class="font-semibold mr-1">${key}:</span>
+                <span>${displayValue}</span>
+                <button aria-label="Remover filtro de ${key}: ${displayValue}" class="ml-2 text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="removeFilter('${key}')">
+                    <span class="material-icons text-base">close</span>
+                </button>
+            `;
+            return chip;
+        }
+        
+        // Función para agregar filtro
+        function addFilter(key, value, displayValue) {
+            activeFilters.set(key, { value, displayValue });
+            updateFilterChips();
+        }
+        
+        // Función para remover filtro
+        function removeFilter(key) {
+            activeFilters.delete(key);
+            updateFilterChips();
+            // Limpiar el campo correspondiente en el formulario
+            const field = document.querySelector(`[name="${key}"]`);
+            if (field) field.value = '';
+        }
+        
+        // Función para actualizar chips de filtros
+        function updateFilterChips() {
+            // Limpiar chips existentes (solo los de filtros, no el botón "Limpiar todo")
+            const existingChips = filterChipsContainer.querySelectorAll('.inline-flex');
+            existingChips.forEach(chip => chip.remove());
+            
+            // Agregar chips para filtros activos
+            activeFilters.forEach((filterData, key) => {
+                const chip = createFilterChip(key, filterData.value, filterData.displayValue);
+                filterChipsContainer.insertBefore(chip, filterChipsContainer.lastElementChild);
+            });
+            
+            // Asegurar que el botón "Limpiar todo" esté siempre al final
+            if (!filterChipsContainer.contains(clearAllButton)) {
+                filterChipsContainer.appendChild(clearAllButton);
+            }
+        }
+        
+        // Función para limpiar campos del formulario de filtros
+        function clearFilterFormFields() {
+            if (filterForm) {
+                const formFields = filterForm.querySelectorAll('input, select');
+                formFields.forEach(field => {
+                    if (field.type === 'date') {
+                        field.value = '';
+                    } else if (field.tagName === 'SELECT') {
+                        field.selectedIndex = 0;
+                    } else {
+                        field.value = '';
+                    }
+                });
+            }
+        }
+        
+        // Función para limpiar todos los filtros
+        function clearAllFilters() {
+            activeFilters.clear();
+            updateFilterChips();
+            
+            // Limpiar formulario de filtros principales
+            clearFilterFormFields();
+            
+            // Limpiar también el formulario de fechas
+            const dateForm = document.querySelector('form[class*="space-y-4"]');
+            if (dateForm) {
+                const dateFields = dateForm.querySelectorAll('input[type="date"]');
+                dateFields.forEach(field => field.value = '');
+            }
+            
+            // Mostrar todas las filas de la tabla
+            showAllTableRows();
+            
+                         // Mostrar mensaje de confirmación
+             console.log('Todos los filtros han sido limpiados');
+             showToast('Todos los filtros han sido limpiados', 'info');
+        }
+        
+        // ===== FUNCIONES DE FILTRADO DE TABLA =====
+        
+        // Función para aplicar filtros a la tabla
+        function applyFiltersToTable() {
+            const rows = document.querySelectorAll('tbody tr');
+            let visibleCount = 0;
+            
+            rows.forEach(row => {
+                let shouldShow = true;
+                
+                // Aplicar cada filtro activo
+                activeFilters.forEach((filterData, key) => {
+                    if (!shouldShow) return; // Si ya está filtrado, no continuar
+                    
+                    const value = filterData.value;
+                    const displayValue = filterData.displayValue;
+                    
+                    switch (key) {
+                        case 'cuit':
+                            const cuitCell = row.cells[3].textContent;
+                            if (!cuitCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'ieric':
+                            const iericCell = row.cells[2].textContent;
+                            if (!iericCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'legajo':
+                            const actaCell = row.cells[1].textContent;
+                            if (!actaCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'estado-filtro':
+                            const estadoCell = row.cells[5].textContent;
+                            if (!estadoCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'giro':
+                            // El giro se puede aplicar según la lógica de negocio
+                            // Por ahora, mostramos todas las filas que coincidan con otros filtros
+                            break;
+                            
+                        case 'date-range':
+                            const dateRange = value.split('-');
+                            const startDate = new Date(dateRange[0]);
+                            const endDate = new Date(dateRange[1]);
+                            const rowStartDate = new Date(row.cells[6].textContent);
+                            const rowEndDate = new Date(row.cells[7].textContent);
+                            
+                            if (rowStartDate < startDate || rowEndDate > endDate) {
+                                shouldShow = false;
+                            }
+                            break;
+                    }
+                });
+                
+                // Mostrar u ocultar la fila según los filtros
+                if (shouldShow) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            
+            // Actualizar contador de resultados
+            updateResultsCount();
+            
+            console.log(`Filtros aplicados. Filas visibles: ${visibleCount}`);
+        }
+        
+        // Función para mostrar todas las filas de la tabla
+        function showAllTableRows() {
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                row.style.display = '';
+            });
+            updateResultsCount();
+        }
+        
+        // Función para aplicar filtros y búsqueda simultáneamente
+        function applyFiltersAndSearch(searchTerm) {
+            const rows = document.querySelectorAll('tbody tr');
+            let visibleCount = 0;
+            
+            rows.forEach(row => {
+                let shouldShow = true;
+                
+                // Primero aplicar filtros
+                activeFilters.forEach((filterData, key) => {
+                    if (!shouldShow) return;
+                    
+                    const value = filterData.value;
+                    
+                    switch (key) {
+                        case 'cuit':
+                            const cuitCell = row.cells[3].textContent;
+                            if (!cuitCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'ieric':
+                            const iericCell = row.cells[2].textContent;
+                            if (!iericCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'legajo':
+                            const actaCell = row.cells[1].textContent;
+                            if (!actaCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'estado-filtro':
+                            const estadoCell = row.cells[5].textContent;
+                            if (!estadoCell.includes(value)) {
+                                shouldShow = false;
+                            }
+                            break;
+                            
+                        case 'date-range':
+                            const dateRange = value.split('-');
+                            const startDate = new Date(dateRange[0]);
+                            const endDate = new Date(dateRange[1]);
+                            const rowStartDate = new Date(row.cells[6].textContent);
+                            const rowEndDate = new Date(row.cells[7].textContent);
+                            
+                            if (rowStartDate < startDate || rowEndDate > endDate) {
+                                shouldShow = false;
+                            }
+                            break;
+                    }
+                });
+                
+                // Luego aplicar búsqueda si pasa los filtros
+                if (shouldShow && searchTerm) {
+                    const text = row.textContent.toLowerCase();
+                    if (!text.includes(searchTerm)) {
+                        shouldShow = false;
+                    }
+                }
+                
+                // Mostrar u ocultar la fila
+                if (shouldShow) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            
+            console.log(`Filtros + búsqueda aplicados. Filas visibles: ${visibleCount}`);
+        }
+        
+        // Event listener para botón "Limpiar todo"
+        const clearAllButton = document.getElementById('clearAllButton');
+        if (clearAllButton) {
+            clearAllButton.addEventListener('click', clearAllFilters);
+        }
+        
+        // ===== MANEJO DE FORMULARIOS DE FILTROS =====
+        if (filterForm) {
+            filterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Procesar filtros del formulario
+                const formData = new FormData(filterForm);
+                formData.forEach((value, key) => {
+                    if (value && value !== 'Todos') {
+                        let displayValue = value;
+                        
+                        // Mejorar display values para campos específicos
+                        if (key === 'estado-filtro') {
+                            displayValue = `Estado: ${value}`;
+                        } else if (key === 'giro') {
+                            displayValue = `Giro: ${value}`;
+                        } else if (key === 'cuit') {
+                            displayValue = `CUIT: ${value}`;
+                        } else if (key === 'ieric') {
+                            displayValue = `IERIC: ${value}`;
+                        } else if (key === 'legajo') {
+                            displayValue = `Legajo: ${value}`;
+                        }
+                        
+                        addFilter(key, value, displayValue);
+                    }
+                });
+                
+                // Aplicar filtros a la tabla
+                applyFiltersToTable();
+                
+                // Limpiar campos del formulario después de aplicar filtros
+                clearFilterFormFields();
+                
+                                 // Simular aplicación de filtros
+                 console.log('Filtros aplicados:', Object.fromEntries(activeFilters));
+                 showToast('Filtros aplicados correctamente', 'success');
+            });
+        }
+        
+        // ===== FILTROS DE FECHA =====
+        const dateForm = document.querySelector('form[class*="space-y-4"]');
+        if (dateForm) {
+            dateForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const dateFrom = dateForm.querySelector('[name="date-from"]').value;
+                const dateTo = dateForm.querySelector('[name="dateTo"]').value;
+                
+                if (dateFrom && dateTo) {
+                    const displayValue = `${dateFrom} a ${dateTo}`;
+                    addFilter('date-range', `${dateFrom}-${dateTo}`, `Fecha: ${displayValue}`);
+                    
+                                         // Aplicar filtros a la tabla
+                     applyFiltersToTable();
+                     
+                     // Limpiar campos de fecha después de aplicar
+                     dateForm.querySelector('[name="date-from"]').value = '';
+                     dateForm.querySelector('[name="dateTo"]').value = '';
+                     
+                     showToast('Filtro de fecha aplicado correctamente', 'success');
+                 } else {
+                     showToast('Por favor selecciona ambas fechas', 'warning');
+                 }
+            });
+        }
+        
+        // ===== SISTEMA DE MODALES =====
+        const modals = document.querySelectorAll('.modal');
+        
+        // Función para abrir modal
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Función para cerrar modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Event listeners para cerrar modales
+        modals.forEach(modal => {
+            const closeButton = modal.querySelector('button[onclick*="classList.remove"]');
+            if (closeButton) {
+                closeButton.addEventListener('click', () => {
+                    closeModal(modal.id);
+                });
+            }
+            
+            // Cerrar modal al hacer clic fuera
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal(modal.id);
+                }
+            });
+        });
+        
+        // ===== VALIDACIONES DE FORMULARIOS =====
+        const formInputs = document.querySelectorAll('input, select, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                validateField(input);
+            });
+        });
+        
+        function validateField(field) {
+            const value = field.value.trim();
+            let isValid = true;
+            let errorMessage = '';
+            
+            // Validaciones específicas por tipo de campo
+            if (field.type === 'number' && value && isNaN(value)) {
+                isValid = false;
+                errorMessage = 'Por favor ingresa un número válido';
+            }
+            
+            if (field.required && !value) {
+                isValid = false;
+                errorMessage = 'Este campo es obligatorio';
+            }
+            
+            // Aplicar estilos de validación
+            if (!isValid) {
+                field.classList.add('border-red-500');
+                // Mostrar mensaje de error
+                showFieldError(field, errorMessage);
+            } else {
+                field.classList.remove('border-red-500');
+                hideFieldError(field);
+            }
+            
+            return isValid;
+        }
+        
+        function showFieldError(field, message) {
+            // Remover error anterior si existe
+            hideFieldError(field);
+            
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'text-red-500 text-xs mt-1';
+            errorDiv.textContent = message;
+            errorDiv.id = `${field.id}-error`;
+            
+            field.parentNode.appendChild(errorDiv);
+        }
+        
+        function hideFieldError(field) {
+            const existingError = document.getElementById(`${field.id}-error`);
+            if (existingError) {
+                existingError.remove();
+            }
+        }
+        
+        // ===== BOTÓN DE ENVÍO INTELIGENTE =====
+        if (sendButton) {
+            sendButton.addEventListener('click', () => {
+                const selectedRows = Array.from(rowCheckboxes).filter(cb => cb.checked);
+                
+                if (selectedRows.length === 0) {
+                    alert('Por favor selecciona al menos una fila');
+                    return;
+                }
+                
+                // Mostrar modal de confirmación
+                openConfirmSendModal(selectedRows.length);
+            });
+        }
+        
+        // ===== INICIALIZACIÓN DE TABS =====
+        openTab(null, 'legajoTab', 'folder_open', document.querySelector('.tab-btn'));
+        
+        // ===== FUNCIONALIDADES ADICIONALES =====
+        
+        // Búsqueda en tiempo real
+        const searchInput = document.querySelector('input[placeholder="Buscar..."]');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                
+                // Si hay filtros activos, aplicar búsqueda + filtros
+                if (activeFilters.size > 0) {
+                    applyFiltersAndSearch(searchTerm);
+                } else {
+                    // Solo búsqueda si no hay filtros
+                    const rows = document.querySelectorAll('tbody tr');
+                    rows.forEach(row => {
+                        const text = row.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Actualizar contador de resultados
+                updateResultsCount();
+            });
+        }
+        
+        // Contador de resultados
+        function updateResultsCount() {
+            const visibleRows = document.querySelectorAll('tbody tr:not([style*="display: none"])');
+            const countElement = document.querySelector('.text-sm.text-[var(--text-secondary)]');
+            if (countElement) {
+                countElement.textContent = `Mostrando 1 a ${visibleRows.length} de ${rowCheckboxes.length} resultados`;
+            }
+        }
+        
+        // Actualizar contador cuando cambien los filtros
+        if (searchInput) {
+            searchInput.addEventListener('input', updateResultsCount);
+        }
+        
+        // Inicializar contador
+        updateResultsCount();
+    });
+    
+    // ===== FUNCIÓN DE TABS (mantener fuera del DOMContentLoaded) =====
+    function openTab(evt, tabName, iconName, element) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.querySelectorAll("#viewActaModal .tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove('active');
+        }
+        tablinks = document.querySelectorAll("#viewActaModal .tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-tab", "bg-white", "text-[var(--primary)]");
+            tablinks[i].classList.add("bg-gray-200", "text-[var(--text-secondary)]");
+            tablinks[i].querySelector('.material-icons').textContent = 'folder';
+        }
+        const targetTab = document.getElementById(tabName);
+        if (targetTab) {
+            targetTab.style.display = "block";
+            targetTab.classList.add('active');
+        }
+        const targetButton = evt ? evt.currentTarget : element;
+        if (targetButton) {
+            targetButton.classList.add("active-tab", "bg-white", "text-[var(--primary)]");
+            targetButton.classList.remove("bg-gray-200", "text-[var(--text-secondary)]");
+            targetButton.querySelector('.material-icons').textContent = iconName;
+        }
+    }
+    
+    // ===== FUNCIONES GLOBALES PARA FILTROS =====
+    function removeFilter(key) {
+        // Esta función se llama desde los chips de filtros
+        const event = new Event('click');
+        document.dispatchEvent(event);
+        
+        // Remover el filtro específico
+        const filterChipsContainer = document.getElementById('filter-chips-container');
+        const chipToRemove = filterChipsContainer.querySelector(`[onclick*="${key}"]`).closest('.inline-flex');
+        if (chipToRemove) {
+            chipToRemove.remove();
+        }
+    }
+    
+         // ===== FUNCIONES DEL MODAL DE CONFIRMACIÓN =====
+     function openConfirmSendModal(selectedCount) {
+         const modal = document.getElementById('confirmSendModal');
+         const countElement = document.getElementById('selectedCount');
+         
+         if (modal && countElement) {
+             countElement.textContent = `${selectedCount} acta${selectedCount > 1 ? 's' : ''} seleccionada${selectedCount > 1 ? 's' : ''}`;
+             modal.classList.add('active');
+             document.body.style.overflow = 'hidden';
+         }
+     }
+     
+     // ===== SISTEMA DE NOTIFICACIONES TOAST =====
+     function showToast(message, type = 'success') {
+         const toastContainer = document.getElementById('toast-container');
+         
+         // Crear el toast
+         const toast = document.createElement('div');
+         toast.className = `flex items-center gap-3 p-4 rounded-lg shadow-lg text-white transform transition-all duration-300 translate-x-full ${
+             type === 'success' ? 'bg-green-500' : 
+             type === 'error' ? 'bg-red-500' : 
+             type === 'warning' ? 'bg-yellow-500' : 'bg-blue-500'
+         }`;
+         
+         // Ícono según el tipo
+         const icon = type === 'success' ? 'check_circle' : 
+                     type === 'error' ? 'error' : 
+                     type === 'warning' ? 'warning' : 'info';
+         
+         toast.innerHTML = `
+             <span class="material-icons text-xl">${icon}</span>
+             <span class="font-medium">${message}</span>
+             <button class="ml-auto text-white hover:text-gray-200" onclick="this.parentElement.remove()">
+                 <span class="material-icons text-sm">close</span>
+             </button>
+         `;
+         
+         // Agregar al contenedor
+         toastContainer.appendChild(toast);
+         
+         // Animar entrada
+         setTimeout(() => {
+             toast.classList.remove('translate-x-full');
+         }, 100);
+         
+         // Auto-remover después de 5 segundos
+         setTimeout(() => {
+             if (toast.parentElement) {
+                 toast.classList.add('translate-x-full');
+                 setTimeout(() => {
+                     if (toast.parentElement) {
+                         toast.remove();
+                     }
+                 }, 300);
+             }
+         }, 5000);
+     }
+    
+    function closeConfirmSendModal() {
+        const modal = document.getElementById('confirmSendModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+    
+         function confirmSend() {
+         const selectedRows = Array.from(document.querySelectorAll('.row-checkbox:checked'));
+         const destino = document.getElementById('destino').value;
+         
+         if (selectedRows.length === 0) {
+             showToast('No hay actas seleccionadas', 'error');
+             return;
+         }
+         
+         // Obtener datos de las filas seleccionadas
+         const selectedData = selectedRows.map(checkbox => {
+             const row = checkbox.closest('tr');
+             const acta = row.cells[1].textContent;
+             const ieric = row.cells[2].textContent;
+             const cuit = row.cells[3].textContent;
+             return { acta, ieric, cuit, destino };
+         });
+         
+         console.log('Datos seleccionados para envío:', selectedData);
+         
+         // Cerrar modal
+         closeConfirmSendModal();
+         
+         // Mostrar notificación de envío en progreso
+         showToast(`Enviando ${selectedData.length} legajo${selectedData.length > 1 ? 's' : ''} a ${destino}...`, 'info');
+         
+         // Simular envío
+         setTimeout(() => {
+             // Mostrar notificación de éxito
+             const destinoDisplay = destino === 'legales' ? 'Legales' :
+                                  destino === 'fiscalizacion' ? 'Fiscalización' :
+                                  destino === 'representacion' ? 'Representación' :
+                                  destino === 'imr' ? 'IMR' : 'Auditoría';
+             
+             showToast(`¡Se enviaron ${selectedData.length} legajo${selectedData.length > 1 ? 's' : ''} a ${destinoDisplay} exitosamente!`, 'success');
+             
+             // Desmarcar checkboxes después del envío
+             selectedRows.forEach(cb => cb.checked = false);
+             const selectAllCheckbox = document.getElementById('selectAll');
+             if (selectAllCheckbox) selectAllCheckbox.checked = false;
+             
+             // Actualizar botón de envío
+             const sendButton = document.getElementById('sendButton');
+             if (sendButton) sendButton.disabled = true;
+         }, 2000);
+     }
+</script>
+</body></html>
