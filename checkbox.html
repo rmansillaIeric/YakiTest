@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="es">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>IERIC - Legales</title>
@@ -15,9 +16,10 @@
             --background: #E8F0F7;
             --neutral: #DEDFDE;
             --text-primary: #1E293B;
-            --text-secondary: #475569;
+            --text-secondary: #374151; /* Mejorado para mejor contraste */
             --accent: #E8F0F7;
             --white: #FFFFFF;
+            --focus-ring: #3B82F6; /* Anillo de focus visible */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -34,341 +36,409 @@
         .tab-content.active {
             display: block;
         }
+        /* Mejoras de accesibilidad */
+        .focus-visible:focus {
+            outline: 2px solid var(--focus-ring);
+            outline-offset: 2px;
+        }
+        /* Clase para pantallas de solo lectura */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        /* Mejor contraste para estados */
+        .status-assigned {
+            background-color: #FEF3C7;
+            color: #92400E;
+        }
+        .status-in-process {
+            background-color: #DBEAFE;
+            color: #1E40AF;
+        }
+        .status-completed {
+            background-color: #D1FAE5;
+            color: #065F46;
+        }
+        
+        /* Mejor contraste para iconos de acción */
+        .action-icon {
+            color: #6B7280; /* text-gray-500 - mejor contraste */
+        }
+        .action-icon:hover {
+            color: var(--primary); /* #084470 - excelente contraste */
+        }
+        .action-icon:focus {
+            color: var(--primary);
+        }
     </style>
 </head>
 <body class="bg-[var(--background)]">
 <div class="flex min-h-screen">
-<aside class="w-64 bg-[var(--primary)] text-white flex flex-col p-4 space-y-6">
+<aside class="w-64 bg-[var(--primary)] text-white flex flex-col p-4 space-y-6" role="complementary" aria-label="Navegación principal">
 <div class="flex items-center gap-2 px-2">
-<img alt="IERIC Logo" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxynST5xfdDiU3l1SLNBniPh7ffqO2ao_eD4hJp1_DSacnRGor3gUZbh4FRW_hj38K7mc3jmAKchjBkXB0mgRcrx6SlP3-zPLzo_TaY_H4dhgmEiUx_Ki1s_m9Ibf4aJi4AeC7gBY3Bndif1FGVCbl6cC8WKsanUSvarAX3LvINbJPZpk9cagUnXqjbRmihZBZHEntUTyHo1qw5NktDk23XXw-SG9INlRaAAPyKYfCfhWOwhgwz1wZoFQs4ZPRnvMRGvuabB4Hko"/>
+<img alt="Logo de IERIC" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxynST5xfdDiU3l1SLNBniPh7ffqO2ao_eD4hJp1_DSacnRGor3gUZbh4FRW_hj38K7mc3jmAKchjBkXB0mgRcrx6SlP3-zPLzo_TaY_H4dhgmEiUx_Ki1s_m9Ibf4aJi4AeC7gBY3Bndif1FGVCbl6cC8WKsanUSvarAX3LvINbJPZpk9cagUnXqjbRmihZBZHEntUTyHo1qw5NktDk23XXw-SG9INlRaAAPyKYfCfhWOwhgwz1wZoFQs4ZPRnvMRGvuabB4Hko"/>
 <div>
 <h1 class="text-xl font-bold">IERIC</h1>
 <p class="text-xs text-gray-300">v1.2.3</p>
 </div>
 </div>
-<nav class="flex-grow space-y-2">
-<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
-<span class="material-icons">home</span>
+<nav class="flex-grow space-y-2" role="navigation" aria-label="Menú de navegación">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors focus-visible:focus" href="#" aria-current="false">
+<span class="material-icons" aria-hidden="true">home</span>
 <span>Inicio</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
-<span class="material-icons">search</span>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors focus-visible:focus" href="#" aria-current="false">
+<span class="material-icons" aria-hidden="true">search</span>
 <span>Fiscalización</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-white text-[var(--primary)] font-semibold shadow-md" href="#">
-<span class="material-icons">gavel</span>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-white text-[var(--primary)] font-semibold shadow-md focus-visible:focus" href="#" aria-current="page">
+<span class="material-icons" aria-hidden="true">gavel</span>
 <span>Legales</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
-<span class="material-icons">attach_money</span>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors focus-visible:focus" href="#" aria-current="false">
+<span class="material-icons" aria-hidden="true">attach_money</span>
 <span>Cobranzas</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
-<span class="material-icons">visibility</span>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors focus-visible:focus" href="#" aria-current="false">
+<span class="material-icons" aria-hidden="true">visibility</span>
 <span>Auditoría</span>
 </a>
 </nav>
 </aside>
 <div class="flex-1 flex flex-col">
-<header class="bg-white shadow-sm flex items-center justify-between px-6 py-3">
-<h2 class="text-2xl font-bold text-[var(--text-primary)]">Legales</h2>
+<header class="bg-white shadow-sm flex items-center justify-between px-6 py-3" role="banner">
+<h1 class="text-2xl font-bold text-[var(--text-primary)]">Legales</h1>
 <div class="flex items-center gap-4">
-<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]">
-<span class="material-icons">notifications</span>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)] focus-visible:focus" aria-label="Notificaciones">
+<span class="material-icons" aria-hidden="true">notifications</span>
 </button>
-<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]">
-<span class="material-icons">settings</span>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)] focus-visible:focus" aria-label="Configuración">
+<span class="material-icons" aria-hidden="true">settings</span>
 </button>
-<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]">
-<span class="material-icons">apps</span>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)] focus-visible:focus" aria-label="Aplicaciones">
+<span class="material-icons" aria-hidden="true">apps</span>
 </button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEAHFFmCcCmzlgq0obdnixDykNX_1Ec3eDs8jTp0dNsnLYg0lnE71ig4XJBoWNiTlq44U3kJCqxUFg4O3n0Af4AVyTuZaftL2upaEwtiDcBUYdFOq7ahwRdmSwE7GhogpNP4Tfrd5a1t2aaNGcSJ3pP4ReCqc6H3wYjL4uVHc6j7xnra40fR9P6cJzTFjriU1tFKXe897OA3WsvYt16yisIs0-CRlofwmDlwxZ_9RWq8YBbG7poy9Fg3FocCJ0Yw3gBVG81hOiQkY");'></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" role="img" aria-label="Foto de perfil del usuario" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEAHFFmCcCmzlgq0obdnixDykNX_1Ec3eDs8jTp0dNsnLYg0lnE71ig4XJBoWNiTlq44U3kJCqxUFg4O3n0Af4AVyTuZaftL2upaEwtiEtiDcBUYdFOq7ahwRdmSwE7GhogpNP4Tfrd5a1t2aaNGcSJ3pP4ReCqc6H3wYjL4uVHc6j7xnra40fR9P6cJzTFjriU1tFKXe897OA3WsvYt16yisIs0-CRlofwmDlwxZ_9RWq8YBbG7poy9Fg3FocCJ0Yw3gBVG81hOiQkY");'></div>
 </div>
 </header>
-<main class="flex-1 p-6 flex flex-col gap-6">
+<main class="flex-1 p-6 flex flex-col gap-6" role="main">
 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col flex-1">
 <div class="flex justify-between items-center mb-6">
-<h3 class="text-xl font-bold text-[var(--text-primary)]">Acta de fiscalización</h3>
+<h2 class="text-xl font-bold text-[var(--text-primary)]">Acta de fiscalización</h2>
 <div class="relative w-1/3">
-<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
-<input class="form-input w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition" placeholder="Buscar..." type="text"/>
+        <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]" aria-hidden="true">search</span>
+<input class="form-input w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-2 focus:ring-[var(--secondary)] focus:border-transparent transition focus-visible:focus" placeholder="Buscar..." type="text" aria-label="Buscar actas de fiscalización"/>
 </div>
 </div>
 <div class="flex flex-wrap items-center gap-4 mb-4 pb-2 border-b">
 <div class="relative group">
-<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 transition-colors text-sm font-medium">
-<span class="material-icons text-lg">filter_list</span>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 transition-colors text-sm font-medium focus-visible:focus" aria-expanded="false" aria-haspopup="true" aria-controls="filter-dropdown">
+<span class="material-icons text-lg" aria-hidden="true">filter_list</span>
 <span>Filtro</span>
-<span class="material-icons text-lg transition-transform group-hover:rotate-180">expand_more</span>
+<span class="material-icons text-lg transition-transform group-hover:rotate-180" aria-hidden="true">expand_more</span>
 </button>
-<div class="absolute z-20 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4">
-<form class="space-y-4">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="absolute z-20 mt-2 w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4" id="filter-dropdown" role="dialog" aria-label="Opciones de filtro">
+<form class="space-y-4" role="search" aria-label="Formulario de filtros">
+<fieldset class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<legend class="sr-only">Filtros básicos</legend>
 <div>
 <label class="block text-sm font-medium text-gray-700" for="cuit">CUIT</label>
-<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="cuit" name="cuit" type="number"/>
+<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm focus-visible:focus" id="cuit" name="cuit" type="number" aria-describedby="cuit-help"/>
+<div id="cuit-help" class="sr-only">Ingrese el número de CUIT sin guiones</div>
 </div>
 <div>
 <label class="block text-sm font-medium text-gray-700" for="ieric">IERIC</label>
-<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="ieric" name="ieric" type="text"/>
+<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm focus-visible:focus" id="ieric" name="ieric" type="text" aria-describedby="ieric-help"/>
+<div id="ieric-help" class="sr-only">Ingrese el código IERIC</div>
 </div>
-</div>
+</fieldset>
 <div>
 <label class="block text-sm font-medium text-gray-700" for="legajo">Legajo</label>
-<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="legajo" name="legajo" type="text"/>
+<input class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm focus-visible:focus" id="legajo" name="legajo" type="text" aria-describedby="legajo-help"/>
+<div id="legajo-help" class="sr-only">Ingrese el número de legajo</div>
 </div>
 <div>
 <label class="block text-sm font-medium text-gray-700" for="estado-filtro">Estado</label>
-<select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="estado-filtro" name="estado-filtro">
-<option>Todos</option>
-<option>Ingresado</option>
-<option>Pendiente</option>
-<option>Archivado</option>
-<option>Resuelto</option>
+<select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm focus-visible:focus" id="estado-filtro" name="estado-filtro" aria-describedby="estado-help">
+<option value="">Todos</option>
+<option value="Ingresado">Ingresado</option>
+<option value="Pendiente">Pendiente</option>
+<option value="Archivado">Archivado</option>
+<option value="Resuelto">Resuelto</option>
 </select>
+<div id="estado-help" class="sr-only">Seleccione el estado de las actas</div>
 </div>
 <div>
 <label class="block text-sm font-medium text-gray-700" for="giro">Giro</label>
-<select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" id="giro" name="giro">
-<option>Todos</option>
-<option>IMR</option>
-<option>Fiscalización</option>
-<option>Representación</option>
-<option>Legales</option>
+<select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm focus-visible:focus" id="giro" name="giro" aria-describedby="giro-help">
+<option value="">Todos</option>
+<option value="IMR">IMR</option>
+<option value="Fiscalización">Fiscalización</option>
+<option value="Representación">Representación</option>
+<option value="Legales">Legales</option>
 </select>
+<div id="giro-help" class="sr-only">Seleccione el tipo de giro</div>
 </div>
 <div class="flex justify-end gap-2 pt-4 border-t">
-<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300" type="button">Limpiar</button>
-<button class="px-4 py-2 text-sm font-medium text-white bg-[var(--primary)] rounded-md hover:bg-blue-800" type="submit">Aplicar</button>
+<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus-visible:focus" type="button">Limpiar</button>
+<button class="px-4 py-2 text-sm font-medium text-white bg-[var(--primary)] rounded-md hover:bg-blue-800 focus-visible:focus" type="submit">Aplicar</button>
 </div>
 </form>
 </div>
 </div>
 <div class="relative group">
-<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 transition-colors text-sm font-medium">
-<span class="material-icons text-lg">date_range</span>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-[var(--text-secondary)] hover:bg-gray-200 transition-colors text-sm font-medium focus-visible:focus" aria-expanded="false" aria-haspopup="true" aria-controls="date-dropdown">
+<span class="material-icons text-lg" aria-hidden="true">date_range</span>
 <span>Fecha</span>
-<span class="material-icons text-lg transition-transform group-hover:rotate-180">expand_more</span>
+<span class="material-icons text-lg transition-transform group-hover:rotate-180" aria-hidden="true">expand_more</span>
 </button>
-<div class="absolute z-20 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4">
-<form class="space-y-4">
-<div class="space-y-2">
-<label class="block text-sm font-medium text-gray-700">Rango de fechas</label>
+        <div class="absolute z-20 mt-2 w-80 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4" id="date-dropdown" role="dialog" aria-label="Filtro de fechas">
+<form class="space-y-4" role="search" aria-label="Filtro por rango de fechas">
+<fieldset class="space-y-2">
+<legend class="block text-sm font-medium text-gray-700">Rango de fechas</legend>
                 <div class="flex items-center gap-2">
-                    <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" name="date-from" type="date"/>
-                    <span>-</span>
-                    <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm" name="dateTo" type="date"/>
+                    <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm focus-visible:focus" name="date-from" type="date" aria-label="Fecha desde"/>
+                    <span aria-hidden="true">-</span>
+                    <input class="form-input block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm focus-visible:focus" name="dateTo" type="date" aria-label="Fecha hasta"/>
                 </div>
-</div>
+</fieldset>
 <div>
-<a class="text-sm text-[var(--primary)] hover:underline" href="#">Añadir otro filtro de fecha</a>
+<a class="text-sm text-[var(--primary)] hover:underline focus-visible:focus" href="#" aria-label="Añadir otro filtro de fecha">Añadir otro filtro de fecha</a>
 </div>
 <div class="flex justify-end gap-2 pt-4 border-t">
-<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300" type="button">Cancelar</button>
-<button class="px-4 py-2 text-sm font-medium text-white bg-[var(--primary)] rounded-md hover:bg-blue-800" type="submit">Aplicar</button>
+<button class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus-visible:focus" type="button">Cancelar</button>
+<button class="px-4 py-2 text-sm font-medium text-white bg-[var(--primary)] rounded-md hover:bg-blue-800 focus-visible:focus" type="submit">Aplicar</button>
 </div>
 </form>
 </div>
 </div>
 </div>
-        <div aria-live="polite" class="flex flex-wrap items-center gap-2 mb-4" id="filter-chips-container">
+        <div aria-live="polite" class="flex flex-wrap items-center gap-2 mb-4" id="filter-chips-container" role="status" aria-label="Filtros activos">
             <!-- Los chips de filtros se agregarán dinámicamente aquí -->
-            <button class="text-sm font-medium text-[var(--primary)] hover:underline transition-colors" id="clearAllButton">Limpiar todo</button>
+            <button class="text-sm font-medium text-[var(--primary)] hover:underline transition-colors focus-visible:focus" id="clearAllButton">Limpiar todo</button>
         </div>
 <div class="overflow-x-auto border-t border-gray-200 flex-1">
-<table class="w-full text-left">
+<div class="sr-only" id="table-summary">
+Tabla que muestra las actas de fiscalización con las siguientes columnas: selección, número de acta, código IERIC, CUIT, razón social, estado de asignación, fecha de inicio, fecha de fin y acciones disponibles. Cada fila representa una acta individual.
+</div>
+<table class="w-full text-left" role="table" aria-labelledby="table-summary">
+<caption class="sr-only">Tabla de actas de fiscalización con información de número de acta, código IERIC, CUIT, razón social, estado de asignación, fechas de inicio y fin, y acciones disponibles</caption>
 <thead>
 <tr class="border-b-2 border-gray-200">
-<th class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)]" id="selectAll" type="checkbox"/></th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Acta</th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">IERIC</th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">CUIT</th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Razón Social</th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Asignación</th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Inicio</th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider">Fin</th>
-<th class="p-3 text-sm font-semibold text-[var(--text-secondary)] tracking-wider text-center">Acciones</th>
+<th class="p-3 text-center" scope="col" id="col-select">
+<span class="sr-only">Selección</span>
+<input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus" id="selectAll" type="checkbox" aria-label="Seleccionar todas las actas"/>
+</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider" scope="col" id="col-acta">Acta</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider" scope="col" id="col-ieric">IERIC</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider" scope="col" id="col-cuit">CUIT</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider" scope="col" id="col-razon">Razón Social</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider" scope="col" id="col-asignacion">Asignación</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider" scope="col" id="col-inicio">Inicio</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider" scope="col" id="col-fin">Fin</th>
+<th class="p-3 text-sm font-semibold text-[var(--text-primary)] tracking-wider text-center" scope="col" id="col-acciones">Acciones</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-gray-200">
 <tr class="hover:bg-gray-50">
-<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
-<td class="p-3 text-sm text-[var(--text-primary)] font-medium">12345</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-001</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">20-12345678-9</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">Constructora Ramirez S.A.</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs">Asignado</span></td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-01-15</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-01-20</td>
-<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<td class="p-3 text-center" headers="col-select">
+<input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus row-checkbox" type="checkbox" aria-label="Seleccionar acta 12345"/>
+</td>
+<td class="p-3 text-sm text-[var(--text-primary)] font-medium" headers="col-acta">12345</td>
+<td class="p-3 text-sm text-[var(--text-primary)]" headers="col-ieric">IERIC-001</td>
+<td class="p-3 text-sm text-[var(--text-primary)]" headers="col-cuit">20-12345678-9</td>
+<td class="p-3 text-sm text-[var(--text-primary)]" headers="col-razon">Constructora Ramirez S.A.</td>
+<td class="p-3 text-sm text-[var(--text-primary)]" headers="col-asignacion"><span class="status-assigned px-2 py-1 rounded-full text-xs">Asignado</span></td>
+<td class="p-3 text-sm text-[var(--text-primary)]" headers="col-inicio">2024-01-15</td>
+<td class="p-3 text-sm text-[var(--text-primary)]" headers="col-fin">2024-01-20</td>
+<td class="p-3 text-sm text-center text-[var(--text-primary)]" headers="col-acciones">
 <div class="flex items-center justify-center space-x-2">
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
-<span class="material-icons">sync_alt</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado" aria-label="Cambiar estado de la acta 12345">
+<span class="material-icons" aria-hidden="true">sync_alt</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
-<span class="material-icons">send</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado" aria-label="Girar acta 12345 a otro departamento">
+<span class="material-icons" aria-hidden="true">send</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
-<span class="material-icons">visibility</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización" aria-label="Ver detalles de la acta 12345">
+<span class="material-icons" aria-hidden="true">visibility</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
-<span class="material-icons">history</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial" aria-label="Ver historial de la acta 12345">
+<span class="material-icons" aria-hidden="true">history</span>
 </button>
 </div>
 </td>
 </tr>
 <tr class="hover:bg-gray-50">
-<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-center">
+    <input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus row-checkbox" type="checkbox" aria-label="Seleccionar acta 67890"/>
+</td>
 <td class="p-3 text-sm text-[var(--text-primary)] font-medium">67890</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-002</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">20-98765432-1</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">Obras Modernas SRL</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs">En Proceso</span></td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-02-01</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-02-10</td>
-<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<td class="p-3 text-sm text-[var(--text-primary)]">IERIC-002</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">20-98765432-1</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">Obras Modernas SRL</td>
+<td class="p-3 text-sm text-[var(--text-primary)]"><span class="status-in-process px-2 py-1 rounded-full text-xs">En Proceso</span></td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-02-01</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-02-10</td>
+<td class="p-3 text-sm text-center text-[var(--text-primary)]">
 <div class="flex items-center justify-center space-x-2">
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
-<span class="material-icons">sync_alt</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado" aria-label="Cambiar estado de la acta 67890">
+<span class="material-icons" aria-hidden="true">sync_alt</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
-<span class="material-icons">send</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado" aria-label="Girar acta 67890 a otro departamento">
+<span class="material-icons" aria-hidden="true">send</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
-<span class="material-icons">visibility</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización" aria-label="Ver detalles de la acta 67890">
+<span class="material-icons" aria-hidden="true">visibility</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
-<span class="material-icons">history</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial" aria-label="Ver historial de la acta 67890">
+<span class="material-icons" aria-hidden="true">history</span>
 </button>
 </div>
 </td>
 </tr>
 <tr class="hover:bg-gray-50">
-<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-center">
+    <input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus row-checkbox" type="checkbox" aria-label="Seleccionar acta 11223"/>
+</td>
 <td class="p-3 text-sm text-[var(--text-primary)] font-medium">11223</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-003</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">20-11223344-5</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">Edificaciones Lopez</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs">Completado</span></td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-03-05</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-03-15</td>
-<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<td class="p-3 text-sm text-[var(--text-primary)]">IERIC-003</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">20-11223344-5</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">Edificaciones Lopez</td>
+<td class="p-3 text-sm text-[var(--text-primary)]"><span class="status-completed px-2 py-1 rounded-full text-xs">Completado</span></td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-03-05</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-03-15</td>
+<td class="p-3 text-sm text-center text-[var(--text-primary)]">
 <div class="flex items-center justify-center space-x-2">
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
-<span class="material-icons">sync_alt</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado" aria-label="Cambiar estado de la acta 11223">
+<span class="material-icons" aria-hidden="true">sync_alt</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
-<span class="material-icons">send</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado" aria-label="Girar acta 11223 a otro departamento">
+<span class="material-icons" aria-hidden="true">send</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
-<span class="material-icons">visibility</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización" aria-label="Ver detalles de la acta 11223">
+<span class="material-icons" aria-hidden="true">visibility</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
-<span class="material-icons">history</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial" aria-label="Ver historial de la acta 11223">
+<span class="material-icons" aria-hidden="true">history</span>
 </button>
 </div>
 </td>
 </tr>
 <tr class="hover:bg-gray-50">
-<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-center">
+    <input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus row-checkbox" type="checkbox" aria-label="Seleccionar acta 44556"/>
+</td>
 <td class="p-3 text-sm text-[var(--text-primary)] font-medium">44556</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-004</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">20-55667788-9</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">Proyectos Urbanos SA</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs">Asignado</span></td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-04-01</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-04-10</td>
-<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<td class="p-3 text-sm text-[var(--text-primary)]">IERIC-004</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">20-55667788-9</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">Proyectos Urbanos SA</td>
+<td class="p-3 text-sm text-[var(--text-primary)]"><span class="status-assigned px-2 py-1 rounded-full text-xs">Asignado</span></td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-04-01</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-04-10</td>
+<td class="p-3 text-sm text-center text-[var(--text-primary)]">
 <div class="flex items-center justify-center space-x-2">
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
-<span class="material-icons">sync_alt</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado" aria-label="Cambiar estado de la acta 44556">
+<span class="material-icons" aria-hidden="true">sync_alt</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
-<span class="material-icons">send</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado" aria-label="Girar acta 44556 a otro departamento">
+<span class="material-icons" aria-hidden="true">send</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
-<span class="material-icons">visibility</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización" aria-label="Ver detalles de la acta 44556">
+<span class="material-icons" aria-hidden="true">visibility</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
-<span class="material-icons">history</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial" aria-label="Ver historial de la acta 44556">
+<span class="material-icons" aria-hidden="true">history</span>
 </button>
 </div>
 </td>
 </tr>
 <tr class="hover:bg-gray-50">
-<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-center">
+    <input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus row-checkbox" type="checkbox" aria-label="Seleccionar acta 77889"/>
+</td>
 <td class="p-3 text-sm text-[var(--text-primary)] font-medium">77889</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-005</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">20-99001122-3</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">Construcciones Perez</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs">En Proceso</span></td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-05-10</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-05-20</td>
-<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<td class="p-3 text-sm text-[var(--text-primary)]">IERIC-005</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">20-99001122-3</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">Construcciones Perez</td>
+<td class="p-3 text-sm text-[var(--text-primary)]"><span class="status-in-process px-2 py-1 rounded-full text-xs">En Proceso</span></td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-05-10</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-05-20</td>
+<td class="p-3 text-sm text-center text-[var(--text-primary)]">
 <div class="flex items-center justify-center space-x-2">
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
-<span class="material-icons">sync_alt</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado" aria-label="Cambiar estado de la acta 77889">
+<span class="material-icons" aria-hidden="true">sync_alt</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
-<span class="material-icons">send</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado" aria-label="Girar acta 77889 a otro departamento">
+<span class="material-icons" aria-hidden="true">send</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
-<span class="material-icons">visibility</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización" aria-label="Ver detalles de la acta 77889">
+<span class="material-icons" aria-hidden="true">visibility</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
-<span class="material-icons">history</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial" aria-label="Ver historial de la acta 77889">
+<span class="material-icons" aria-hidden="true">history</span>
 </button>
 </div>
 </td>
 </tr>
 <tr class="hover:bg-gray-50">
-<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-center">
+    <input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus row-checkbox" type="checkbox" aria-label="Seleccionar acta 99001"/>
+</td>
 <td class="p-3 text-sm text-[var(--text-primary)] font-medium">99001</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-006</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">20-33445566-7</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">Inmobiliaria Gomez</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs">Completado</span></td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-06-01</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-06-15</td>
-<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<td class="p-3 text-sm text-[var(--text-primary)]">IERIC-006</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">20-33445566-7</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">Inmobiliaria Gomez</td>
+<td class="p-3 text-sm text-[var(--text-primary)]"><span class="status-completed px-2 py-1 rounded-full text-xs">Completado</span></td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-06-01</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-06-15</td>
+<td class="p-3 text-sm text-center text-[var(--text-primary)]">
 <div class="flex items-center justify-center space-x-2">
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
-<span class="material-icons">sync_alt</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado" aria-label="Cambiar estado de la acta 99001">
+<span class="material-icons" aria-hidden="true">sync_alt</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
-<span class="material-icons">send</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado" aria-label="Girar acta 99001 a otro departamento">
+<span class="material-icons" aria-hidden="true">send</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
-<span class="material-icons">visibility</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización" aria-label="Ver detalles de la acta 99001">
+<span class="material-icons" aria-hidden="true">visibility</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
-<span class="material-icons">history</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial" aria-label="Ver historial de la acta 99001">
+<span class="material-icons" aria-hidden="true">history</span>
 </button>
 </div>
 </td>
 </tr>
 <tr class="hover:bg-gray-50">
-<td class="p-3 text-center"><input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] row-checkbox" type="checkbox"/></td>
+<td class="p-3 text-center">
+    <input class="form-checkbox h-5 w-5 rounded text-[var(--primary)] focus:ring-[var(--primary)] focus-visible:focus row-checkbox" type="checkbox" aria-label="Seleccionar acta 22334"/>
+</td>
 <td class="p-3 text-sm text-[var(--text-primary)] font-medium">22334</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">IERIC-007</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">20-77889900-1</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">Desarrollos Martinez</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]"><span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs">Asignado</span></td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-07-05</td>
-<td class="p-3 text-sm text-[var(--text-secondary)]">2024-07-15</td>
-<td class="p-3 text-sm text-center text-[var(--text-secondary)]">
+<td class="p-3 text-sm text-[var(--text-primary)]">IERIC-007</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">20-77889900-1</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">Desarrollos Martinez</td>
+<td class="p-3 text-sm text-[var(--text-primary)]"><span class="status-assigned px-2 py-1 rounded-full text-xs">Asignado</span></td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-07-05</td>
+<td class="p-3 text-sm text-[var(--text-primary)]">2024-07-15</td>
+<td class="p-3 text-sm text-center text-[var(--text-primary)]">
 <div class="flex items-center justify-center space-x-2">
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado">
-<span class="material-icons">sync_alt</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('cambioEstadoModal').classList.add('active')" title="Cambio de estado" aria-label="Cambiar estado de la acta 22334">
+<span class="material-icons" aria-hidden="true">sync_alt</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado">
-<span class="material-icons">send</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('girarModal').classList.add('active')" title="Girado" aria-label="Girar acta 22334 a otro departamento">
+<span class="material-icons" aria-hidden="true">send</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización">
-<span class="material-icons">visibility</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('viewActaModal').classList.add('active')" title="Visualización" aria-label="Ver detalles de la acta 22334">
+<span class="material-icons" aria-hidden="true">visibility</span>
 </button>
-<button class="text-gray-400 hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial">
-<span class="material-icons">history</span>
+<button class="action-icon hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('historyModal').classList.add('active')" title="Historial" aria-label="Ver historial de la acta 22334">
+<span class="material-icons" aria-hidden="true">history</span>
 </button>
 </div>
 </td>
@@ -378,59 +448,60 @@
 </div>
 <div class="flex justify-between items-center pt-4 border-t border-gray-200 mt-auto">
 <div class="flex items-center gap-4">
-<button class="px-6 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800 disabled:bg-gray-300 disabled:cursor-not-allowed" disabled="" id="sendButton">Enviar</button>
-<span class="text-sm text-[var(--text-secondary)]">Mostrando 1 a 7 de 25 resultados</span>
+<button class="px-6 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800 disabled:bg-gray-300 disabled:cursor-not-allowed focus-visible:focus" disabled="" id="sendButton" aria-describedby="send-help">Enviar</button>
+<div id="send-help" class="sr-only">Seleccione al menos una acta para habilitar este botón</div>
+<span class="text-sm text-[var(--text-primary)]">Mostrando 1 a 7 de 25 resultados</span>
 </div>
-<div class="flex items-center space-x-2">
-<button class="p-2 rounded-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-[var(--text-secondary)]">
-<span class="material-icons">chevron_left</span>
+<nav class="flex items-center space-x-2" role="navigation" aria-label="Paginación">
+<button class="p-2 rounded-md hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-[var(--text-primary)] focus-visible:focus" aria-label="Página anterior">
+<span class="material-icons" aria-hidden="true">chevron_left</span>
 </button>
-<button class="px-4 py-2 text-sm rounded-md bg-[var(--primary)] text-white font-medium">1</button>
-<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">2</button>
-<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">3</button>
-<span class="text-[var(--text-secondary)]">...</span>
-<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">4</button>
-<button class="p-2 rounded-md hover:bg-gray-100 text-[var(--text-secondary)]">
-<span class="material-icons">chevron_right</span>
+<button class="px-4 py-2 text-sm rounded-md bg-[var(--primary)] text-white font-medium focus-visible:focus" aria-current="page" aria-label="Página 1">1</button>
+<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-primary)] focus-visible:focus" aria-label="Página 2">2</button>
+<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-primary)] focus-visible:focus" aria-label="Página 3">3</button>
+<span class="text-[var(--text-primary)]" aria-hidden="true">...</span>
+<button class="px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-[var(--text-primary)] focus-visible:focus" aria-label="Página 4">4</button>
+<button class="p-2 rounded-md hover:bg-gray-100 text-[var(--text-primary)] focus-visible:focus" aria-label="Página siguiente">
+<span class="material-icons" aria-hidden="true">chevron_right</span>
 </button>
-</div>
+</nav>
 </div>
 </div>
 </main>
 </div>
 </div>
-<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="exportModal">
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="exportModal" role="dialog" aria-modal="true" aria-labelledby="export-title" aria-describedby="export-description">
 <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
 <div class="flex justify-between items-center pb-3 border-b">
-<h3 class="text-lg font-bold text-[var(--text-primary)]">Exportar Datos</h3>
-<button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('exportModal').classList.remove('active')">
-<span class="material-icons">close</span>
+<h2 class="text-lg font-bold text-[var(--text-primary)]" id="export-title">Exportar Datos</h2>
+<button class="text-[var(--text-secondary)] hover:text-[var(--primary)] focus-visible:focus" onclick="document.getElementById('exportModal').classList.remove('active')" aria-label="Cerrar modal de exportación">
+<span class="material-icons" aria-hidden="true">close</span>
 </button>
 </div>
 <div class="py-4 space-y-3">
-<p class="text-sm text-[var(--text-secondary)]">Seleccione el formato en el que desea exportar los datos de la tabla.</p>
-<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-secondary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors" onclick="alert('Exporting PDF...')">
-<span class="material-icons text-lg text-red-600">picture_as_pdf</span>
+<p class="text-sm text-[var(--text-primary)]" id="export-description">Seleccione el formato en el que desea exportar los datos de la tabla.</p>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="alert('Exporting PDF...')" aria-label="Exportar en formato PDF">
+<span class="material-icons text-lg text-red-600" aria-hidden="true">picture_as_pdf</span>
 <span>Exportar PDF</span>
 </button>
-<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-secondary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors" onclick="alert('Exporting CSV...')">
-<span class="material-icons text-lg text-green-600">description</span>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="alert('Exporting CSV...')" aria-label="Exportar en formato CSV">
+<span class="material-icons text-lg text-green-600" aria-hidden="true">description</span>
 <span>Exportar CSV</span>
 </button>
-<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-secondary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors" onclick="alert('Exporting JSON...')">
-<span class="material-icons text-lg text-blue-600">code</span>
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="alert('Exporting JSON...')" aria-label="Exportar en formato JSON">
+<span class="material-icons text-lg text-blue-600" aria-hidden="true">code</span>
 <span>Exportar JSON</span>
 </button>
 </div>
 <div class="flex justify-end pt-3 border-t">
-<button class="px-4 py-2 bg-gray-200 text-[var(--text-secondary)] rounded-lg hover:bg-gray-300" onclick="document.getElementById('exportModal').classList.remove('active')">Cancelar</button>
+<button class="px-4 py-2 bg-gray-200 text-[var(--text-primary)] rounded-lg hover:bg-gray-300 focus-visible:focus" onclick="document.getElementById('exportModal').classList.remove('active')">Cancelar</button>
 </div>
 </div>
 </div>
 <div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="cambioEstadoModal">
 <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
 <div class="flex justify-between items-center pb-3 border-b">
-<h3 class="text-lg font-bold text-[var(--text-primary)]">Cambio de Estado</h3>
+<h2 class="text-lg font-bold text-[var(--text-primary)]">Cambio de Estado</h2>
 <button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('cambioEstadoModal').classList.remove('active')">
 <span class="material-icons">close</span>
 </button>
@@ -461,7 +532,7 @@
 <div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="girarModal">
 <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
 <div class="flex justify-between items-center pb-3 border-b">
-<h3 class="text-lg font-bold text-[var(--text-primary)]">Girar Acta</h3>
+<h2 class="text-lg font-bold text-[var(--text-primary)]">Girar Acta</h2>
 <button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('girarModal').classList.remove('active')">
 <span class="material-icons">close</span>
 </button>
@@ -491,7 +562,7 @@
 <div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="historyModal">
 <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-lg">
 <div class="flex justify-between items-center pb-3 border-b">
-<h3 class="text-lg font-bold text-[var(--text-primary)]">Historial de Cambios (Acta: 12345)</h3>
+<h2 class="text-lg font-bold text-[var(--text-primary)]">Historial de Cambios (Acta: 12345)</h2>
 <button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('historyModal').classList.remove('active')">
 <span class="material-icons">close</span>
 </button>
@@ -523,7 +594,7 @@
 <div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="filterModal">
 <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-lg">
 <div class="flex justify-between items-center pb-3 border-b">
-<h3 class="text-lg font-bold text-[var(--text-primary)]">Filtrar Actas</h3>
+<h2 class="text-lg font-bold text-[var(--text-primary)]">Filtrar Actas</h2>
 <button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('filterModal').classList.remove('active')">
 <span class="material-icons">close</span>
 </button>
@@ -565,7 +636,7 @@
 <div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="viewActaModal">
 <div class="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
 <div class="flex justify-between items-center p-4 border-b">
-<h3 class="text-xl font-bold text-[var(--text-primary)]">Detalle del Acta de Fiscalización</h3>
+<h2 class="text-xl font-bold text-[var(--text-primary)]">Detalle del Acta de Fiscalización</h2>
 <button class="text-[var(--text-secondary)] hover:text-[var(--primary)]" onclick="document.getElementById('viewActaModal').classList.remove('active')">
 <span class="material-icons">close</span>
 </button>
@@ -676,7 +747,7 @@
     <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
         <div class="flex items-center gap-3 pb-3 border-b">
             <span class="material-icons text-[var(--secondary)] text-2xl">send</span>
-            <h3 class="text-lg font-bold text-[var(--text-primary)]">Confirmar envío</h3>
+            <h2 class="text-lg font-bold text-[var(--text-primary)]">Confirmar envío</h2>
         </div>
         <div class="py-4 space-y-4">
             <p class="text-sm text-[var(--text-secondary)]">¿Está seguro de enviar estas actas?</p>
