@@ -10,38 +10,51 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
+        /* ===== VARIABLES CSS ===== */
         :root {
+            /* Colores principales */
             --primary: #084470;
             --secondary: #68C8D8;
             --background: #E8F0F7;
             --neutral: #DEDFDE;
+            
+            /* Colores de texto */
             --text-primary: #1E293B;
-            --text-secondary: #374151; /* Mejorado para mejor contraste */
+            --text-secondary: #374151;
+            
+            /* Colores de utilidad */
             --accent: #E8F0F7;
             --white: #FFFFFF;
-            --focus-ring: #3B82F6; /* Anillo de focus visible */
+            --focus-ring: #3B82F6;
         }
+
+        /* ===== ESTILOS BASE ===== */
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* ===== COMPONENTES MODALES ===== */
         .modal {
             display: none;
         }
         .modal.active {
             display: flex;
         }
+
+        /* ===== COMPONENTES DE TABS ===== */
         .tab-content {
             display: none;
         }
         .tab-content.active {
             display: block;
         }
-        /* Mejoras de accesibilidad */
+
+        /* ===== ACCESIBILIDAD ===== */
         .focus-visible:focus {
             outline: 2px solid var(--focus-ring);
             outline-offset: 2px;
         }
-        /* Clase para pantallas de solo lectura */
+
         .sr-only {
             position: absolute;
             width: 1px;
@@ -53,7 +66,8 @@
             white-space: nowrap;
             border: 0;
         }
-        /* Mejor contraste para estados */
+
+        /* ===== ESTADOS DE ACTAS ===== */
         .status-assigned {
             background-color: #FEF3C7;
             color: #92400E;
@@ -67,12 +81,12 @@
             color: #065F46;
         }
         
-        /* Mejor contraste para iconos de acción */
+        /* ===== ICONOS DE ACCIÓN ===== */
         .action-icon {
-            color: #6B7280; /* text-gray-500 - mejor contraste */
+            color: #6B7280;
         }
         .action-icon:hover {
-            color: var(--primary); /* #084470 - excelente contraste */
+            color: var(--primary);
         }
         .action-icon:focus {
             color: var(--primary);
@@ -80,8 +94,10 @@
     </style>
 </head>
 <body class="bg-[var(--background)]">
-<div class="flex min-h-screen">
-<aside class="w-64 bg-[var(--primary)] text-white flex flex-col p-4 space-y-6" role="complementary" aria-label="Navegación principal">
+    <!-- ===== LAYOUT PRINCIPAL ===== -->
+    <div class="flex min-h-screen">
+        <!-- ===== BARRA LATERAL DE NAVEGACIÓN ===== -->
+        <aside class="w-64 bg-[var(--primary)] text-white flex flex-col p-4 space-y-6" role="complementary" aria-label="Navegación principal">
 <div class="flex items-center gap-2 px-2">
 <img alt="Logo de IERIC" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxynST5xfdDiU3l1SLNBniPh7ffqO2ao_eD4hJp1_DSacnRGor3gUZbh4FRW_hj38K7mc3jmAKchjBkXB0mgRcrx6SlP3-zPLzo_TaY_H4dhgmEiUx_Ki1s_m9Ibf4aJi4AeC7gBY3Bndif1FGVCbl6cC8WKsanUSvarAX3LvINbJPZpk9cagUnXqjbRmihZBZHEntUTyHo1qw5NktDk23XXw-SG9INlRaAAPyKYfCfhWOwhgwz1wZoFQs4ZPRnvMRGvuabB4Hko"/>
 <div>
@@ -111,9 +127,12 @@
 <span>Auditoría</span>
 </a>
 </nav>
-</aside>
-<div class="flex-1 flex flex-col">
-<header class="bg-white shadow-sm flex items-center justify-between px-6 py-3" role="banner">
+        </aside>
+        
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="flex-1 flex flex-col">
+            <!-- ===== ENCABEZADO ===== -->
+            <header class="bg-white shadow-sm flex items-center justify-between px-6 py-3" role="banner">
 <h1 class="text-2xl font-bold text-[var(--text-primary)]">Legales</h1>
 <div class="flex items-center gap-4">
 <button class="text-[var(--text-secondary)] hover:text-[var(--primary)] focus-visible:focus" aria-label="Notificaciones">
@@ -127,9 +146,12 @@
 </button>
 <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" role="img" aria-label="Foto de perfil del usuario" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEAHFFmCcCmzlgq0obdnixDykNX_1Ec3eDs8jTp0dNsnLYg0lnE71ig4XJBoWNiTlq44U3kJCqxUFg4O3n0Af4AVyTuZaftL2upaEwtiEtiDcBUYdFOq7ahwRdmSwE7GhogpNP4Tfrd5a1t2aaNGcSJ3pP4ReCqc6H3wYjL4uVHc6j7xnra40fR9P6cJzTFjriU1tFKXe897OA3WsvYt16yisIs0-CRlofwmDlwxZ_9RWq8YBbG7poy9Fg3FocCJ0Yw3gBVG81hOiQkY");'></div>
 </div>
-</header>
-<main class="flex-1 p-6 flex flex-col gap-6" role="main">
-<div class="bg-white rounded-xl shadow-lg p-6 flex flex-col flex-1">
+            </header>
+            
+            <!-- ===== CONTENIDO PRINCIPAL ===== -->
+            <main class="flex-1 p-6 flex flex-col gap-6" role="main">
+                <!-- ===== PANEL PRINCIPAL ===== -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col flex-1">
 <div class="flex justify-between items-center mb-6">
 <h2 class="text-xl font-bold text-[var(--text-primary)]">Acta de fiscalización</h2>
 <div class="relative w-1/3">
@@ -223,8 +245,10 @@
         <div aria-live="polite" class="flex flex-wrap items-center gap-2 mb-4" id="filter-chips-container" role="status" aria-label="Filtros activos">
             <!-- Los chips de filtros se agregarán dinámicamente aquí -->
             <button class="text-sm font-medium text-[var(--primary)] hover:underline transition-colors focus-visible:focus" id="clearAllButton">Limpiar todo</button>
-        </div>
-<div class="overflow-x-auto border-t border-gray-200 flex-1">
+                        </div>
+                
+                <!-- ===== TABLA DE ACTAS ===== -->
+                <div class="overflow-x-auto border-t border-gray-200 flex-1">
 <div class="sr-only" id="table-summary">
 Tabla que muestra las actas de fiscalización con las siguientes columnas: selección, número de acta, código IERIC, CUIT, razón social, estado de asignación, fecha de inicio, fecha de fin y acciones disponibles. Cada fila representa una acta individual.
 </div>
@@ -445,8 +469,10 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
 </tr>
 </tbody>
 </table>
-</div>
-<div class="flex justify-between items-center pt-4 border-t border-gray-200 mt-auto">
+                </div>
+                
+                <!-- ===== PAGINACIÓN Y ACCIONES ===== -->
+                <div class="flex justify-between items-center pt-4 border-t border-gray-200 mt-auto">
 <div class="flex items-center gap-4">
 <button class="px-6 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-800 disabled:bg-gray-300 disabled:cursor-not-allowed focus-visible:focus" disabled="" id="sendButton" aria-describedby="send-help">Enviar</button>
 <div id="send-help" class="sr-only">Seleccione al menos una acta para habilitar este botón</div>
@@ -468,9 +494,14 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
 </div>
 </div>
 </main>
-</div>
-</div>
-<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="exportModal" role="dialog" aria-modal="true" aria-labelledby="export-title" aria-describedby="export-description">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===== MODALES ===== -->
+    <!-- Modal de Exportación -->
+    <div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50" id="exportModal" role="dialog" aria-modal="true" aria-labelledby="export-title" aria-describedby="export-description">
 <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
 <div class="flex justify-between items-center pb-3 border-b">
 <h2 class="text-lg font-bold text-[var(--text-primary)]" id="export-title">Exportar Datos</h2>
@@ -480,15 +511,15 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
 </div>
 <div class="py-4 space-y-3">
 <p class="text-sm text-[var(--text-primary)]" id="export-description">Seleccione el formato en el que desea exportar los datos de la tabla.</p>
-<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="alert('Exporting PDF...')" aria-label="Exportar en formato PDF">
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="exportToPDF()" aria-label="Exportar en formato PDF">
 <span class="material-icons text-lg text-red-600" aria-hidden="true">picture_as_pdf</span>
 <span>Exportar PDF</span>
 </button>
-<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="alert('Exporting CSV...')" aria-label="Exportar en formato CSV">
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="exportToCSV()" aria-label="Exportar en formato CSV">
 <span class="material-icons text-lg text-green-600" aria-hidden="true">description</span>
 <span>Exportar CSV</span>
 </button>
-<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="alert('Exporting JSON...')" aria-label="Exportar en formato JSON">
+<button class="w-full flex items-center gap-3 px-4 py-3 text-sm text-[var(--text-primary)] bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors focus-visible:focus" onclick="exportToJSON()" aria-label="Exportar en formato JSON">
 <span class="material-icons text-lg text-blue-600" aria-hidden="true">code</span>
 <span>Exportar JSON</span>
 </button>
@@ -571,14 +602,14 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
 <p class="text-sm text-[var(--text-secondary)] mb-4">A continuación se muestra el historial de cambios de estado y giro para el acta seleccionada.</p>
 <div class="space-y-4">
 <div>
-<h4 class="font-semibold text-[var(--text-primary)]">Cambios de Estado</h4>
+<h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">Cambios de Estado</h3>
 <ul class="list-disc list-inside text-[var(--text-secondary)] text-sm mt-2 space-y-1">
 <li><span class="font-medium">2024-01-15 10:30:</span> Estado cambiado de <span class="font-semibold text-red-600">Pendiente</span> a <span class="font-semibold text-yellow-600">Asignado</span>.</li>
 <li><span class="font-medium">2024-01-18 14:00:</span> Estado cambiado de <span class="font-semibold text-yellow-600">Ingresado </span> a <span class="font-semibold text-blue-600">En Proceso</span>.</li>
 </ul>
 </div>
 <div>
-<h4 class="font-semibold text-[var(--text-primary)]">Cambios de Giro</h4>
+<h3 class="text-lg font-semibold text-[var(--text-primary)] mb-2">Cambios de Giro</h3>
 <ul class="list-disc list-inside text-[var(--text-secondary)] text-sm mt-2 space-y-1">
 <li><span class="font-medium">2024-01-16 09:00:</span> Girado a <span class="font-semibold">Departamento de Legales</span>. Motivo: Revisión inicial.</li>
 <li><span class="font-medium">2024-01-19 11:45:</span> Girado a <span class="font-semibold">Área de Fiscalización</span>. Motivo: Verificación de datos.</li>
@@ -698,11 +729,11 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
 <span class="text-[var(--text-primary)]">Av. Siempre Viva 742, Springfield</span>
 </div>
 <div class="md:col-span-2 pt-4 mt-4 border-t border-gray-200">
-<h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Observaciones</h4>
+<h3 class="text-lg font-bold text-[var(--text-primary)] mb-2">Observaciones</h3>
 <p class="text-[var(--text-secondary)] bg-gray-50 p-3 rounded-lg border">Se constató la falta de registro de 3 trabajadores. Se labró acta de infracción correspondiente. Se requiere presentar la documentación respaldatoria en un plazo de 5 días hábiles.</p>
 </div>
 <div class="md:col-span-2 pt-4 mt-4 border-t border-gray-200">
-<h4 class="text-lg font-bold text-[var(--text-primary)] mb-2">Archivos Adjuntos</h4>
+<h3 class="text-lg font-bold text-[var(--text-primary)] mb-2">Archivos Adjuntos</h3>
 <ul class="space-y-2">
 <li class="flex items-center justify-between bg-gray-50 p-3 rounded-lg border">
 <div class="flex items-center gap-3">
@@ -777,20 +808,21 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
              </button>
          </div>
      </div>
- </div>
- 
-   <!-- Sistema de Notificaciones Toast -->
-  <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
-  
-  <!-- Footer -->
-  <footer class="bg-[var(--primary)] text-white py-4 mt-auto">
+     </div>
+    
+    <!-- ===== SISTEMA DE NOTIFICACIONES ===== -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-[var(--primary)] text-white py-4 mt-auto">
     <div class="container mx-auto px-6 text-center">
       <p class="text-sm font-medium">© IERIC 2025. Todos los derechos reservados.</p>
     </div>
   </footer>
   
- <!-- funcionabilidad activadad -->git 
+<!-- ===== SCRIPT PRINCIPAL ===== -->
 <script>
+    // ===== CONFIGURACIÓN INICIAL =====
     document.addEventListener('DOMContentLoaded', () => {
         // ===== SISTEMA DE CHECKBOXES =====
         const selectAllCheckbox = document.getElementById('selectAll');
@@ -1254,7 +1286,7 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
                 const selectedRows = Array.from(rowCheckboxes).filter(cb => cb.checked);
                 
                 if (selectedRows.length === 0) {
-                    alert('Por favor selecciona al menos una fila');
+                    showToast('Por favor selecciona al menos una fila', 'warning');
                     return;
                 }
                 
@@ -1313,7 +1345,7 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
         updateResultsCount();
     });
     
-    // ===== FUNCIÓN DE TABS (mantener fuera del DOMContentLoaded) =====
+    // ===== FUNCIONES DE TABS =====
     function openTab(evt, tabName, iconName, element) {
         var i, tabcontent, tablinks;
         tabcontent = document.querySelectorAll("#viewActaModal .tab-content");
@@ -1340,7 +1372,7 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
         }
     }
     
-    // ===== FUNCIONES GLOBALES PARA FILTROS =====
+    // ===== FUNCIONES DE FILTROS =====
     function removeFilter(key) {
         // Esta función se llama desde los chips de filtros
         const event = new Event('click');
@@ -1466,5 +1498,33 @@ Tabla que muestra las actas de fiscalización con las siguientes columnas: selec
              if (sendButton) sendButton.disabled = true;
          }, 2000);
      }
+     
+     // ===== FUNCIONES DE EXPORTACIÓN =====
+     function exportToPDF() {
+         showToast('Exportando a PDF...', 'info');
+         // Aquí iría la lógica real de exportación a PDF
+         setTimeout(() => {
+             showToast('PDF exportado exitosamente', 'success');
+         }, 1500);
+     }
+     
+     function exportToCSV() {
+         showToast('Exportando a CSV...', 'info');
+         // Aquí iría la lógica real de exportación a CSV
+         setTimeout(() => {
+             showToast('CSV exportado exitosamente', 'success');
+         }, 1500);
+     }
+     
+     function exportToJSON() {
+         showToast('Exportando a JSON...', 'info');
+         // Aquí iría la lógica real de exportación a JSON
+         setTimeout(() => {
+             showToast('JSON exportado exitosamente', 'success');
+         }, 1500);
+     }
 </script>
-</body></html>
+
+<!-- ===== FIN DEL ARCHIVO ===== -->
+</body>
+</html>
