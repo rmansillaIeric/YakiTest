@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+ import { useState, useCallback } from 'react';
 import type { Legajo, LegajoExtendido, Acta, Articulo, EstadoHistorial, GiroHistorial } from '../utils/types';
 
 type LegajoState = {
