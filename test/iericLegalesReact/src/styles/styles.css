@@ -1,0 +1,10 @@
+.sidebar-collapsed h2 {
+    display: none;
+}
+.sidebar-collapsed .sidebar-item {
+    justify-content: center;    
+}
+
+.sidebar-collapsed .sidebar-item span + *{
+    display: none;
+}
