@@ -406,3 +406,4 @@ El proyecto `useSeleccionarFila` ahora es:
 ---
 
 **Proyecto completado**: Todas las 5 etapas implementadas exitosamente
+
